@@ -1,26 +1,18 @@
-$LAB
-
-//jQuery總碼
-.script("https://code.jquery.com/jquery.min.js")
-
-//Banner輪播
-.script("script/lib/jquery.flexslider-min.js").wait(function(){
-    $(window).load(function(){$(".flexslider").flexslider({animation:"slide"})});
-  })
+//背景影片
+loadjs('https://cdn.jsdelivr.net/npm/vide@0.5.1/dist/jquery.vide.min.js');
 
 //圖片延遲載入
-.script("https://cdn.jsdelivr.net/npm/lazyload@1.8.4/jquery.lazyload.min.js").wait(function(){
-    $("img.lazyload").lazyload();
-  })
+loadjs('https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js', function() {
+    const observer = lozad();
+    observer.observe();
+});
 
-//區塊載入動畫
-.script("https://cdn.rawgit.com/graingert/WOW/34712a3d/dist/wow.min.js").wait(function(){
-    wow=new WOW({animateClass:"animated",offset:100,callback:function(a){console.log("WOW: animating <"+a.tagName.toLowerCase()+">")}}),wow.init();
-  })
-
-//行動版選單
-
-
+//返回頂端
+loadjs(['script/lib/jquery.ui.totop.min.js', 'https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js'], function() {
+    $(document).ready(function() {
+	$().UItoTop({ easingType: 'easeOutQuart' });
+    });
+});
 
 // 另開視窗
 function externalLinks() { 
