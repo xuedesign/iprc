@@ -17,10 +17,10 @@
 <link rel="shortcut icon"  href="images/favicon.ico"/>
 <link rel="icon" href="images/favicon.ico"/>
 <link rel="apple-touch-icon" href="images/favicon@2x.png">
-<title>iPRC 台北愛普 上海愛能</title>
-<link rel="stylesheet" href="css/xuemain.css"/>
-<link rel="stylesheet" href="css/xue-expansion.css">
-<link rel="stylesheet" href="css/xuemobile.css">
+<title>作品展示 | iPRC 台北愛普 上海愛能</title>
+<link rel="stylesheet" href="css/xueMain-pages.css"/>
+<link rel="stylesheet" href="css/xueExpansion.css">
+<link rel="stylesheet" href="css/xueMobile-pages.css">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -37,22 +37,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF94T45"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
+    <div id="loading">
+        <div class="spinner">
+            <img src="images/loading.png" class="ld ld-bounce"/>
+            <p>正在載入...</p>
+        </div>
+    </div>
+    
     <div id="wrap">
         <header>
-            
+            <div id="header-main">
+                <h1><a href="index.html">愛普整合行銷</a></h1>
+                <a id="trigger-overlay" href="#"><i class="far fa-bars"></i></a>
+                <a href="contact.html"><i class="far fa-envelope"></i></a>
+                <nav id="main-nav">
+                    <ul><!--在該單元時，li的class請幫我加上nowin-->
+                        <li><a class="hvr-underline" href="index.html" title="首頁">首頁</a></li>
+                        <li><a class="hvr-underlin" href="about.html" title="關於愛普">關於愛普</a></li>
+                        <li><a class="hvr-underline nowin" href="projects-list.html" title="作品集">作品集</a></li>
+                        <li><a class="hvr-underline" href="contact.html" title="一起合作吧">一起合作吧</a></li>
+                        <li><a href="https://www.facebook.com/iprc.tw/" rel="external" title="[另開視窗]愛普粉絲專頁"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <section id="box_service"></section>
-        <section id="box_team"></section>
-        <section id="box_work"></section>
-        <section id="box_customer"></section>
-        <section id="box_calltoaction"></section>
-        <footer></footer>
-    </div><!--//end #wrap-->    
+        
+        <div id="container">
+            
+            
+        </div>
+        
+        <footer>
+            <div id="tocontact">
+                    <a href="contact.html">開始客製化你的需求，一起合作吧 &gt;</a>
+                </div>
+                <div id="company-info">
+                    <div id="contact-us">
+                        <h2><a href="https://www.facebook.com/iprc.tw/" rel="external">台北愛普.上海愛能</a></h2>
+                        <div id="company-address">
+                            <h4>愛普整合行銷有限公司 / 愛普廣告股份有限公司</h4>
+                            <p>10077台北市中正區和平西路一段122號4樓</p>
+                            <p>TEL +886 2 2363 7171  /  FAX +886 2 2363 9191</p>
+                            <br>
+                            <h4>上海爱能商务咨询有限公司</h4>
+                            <p>上海市200052长宁区安顺路83号1303室</p>
+                            <p>TEL +86 21 6245-8689  /  FAX +86 21 6438-9568</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright">
+                    <p>愛普廣告股份限公司 ‧ 愛普整合行銷有限公司 ‧ 上海爱能商务咨询有限公司<br>
+                    Copyright &copy; 2019 iPRC Co., Ltd All Rights Reserved.</p>
+                </div>  
+        </footer>
+    </div><!--//end #wrap-->
 
-<!--<script src="https://code.jquery.com/jquery.min.js"></script>-->
+    <!--mobile menu-->
+    <div class="overlay overlay-scale">
+        <button type="button" class="overlay-close"><i class="fas fa-times-square"></i></button>
+        <nav>
+            <ul>
+                <li><a class="hvr-overlay" href="index.html">首頁</a></li>
+                <li><a class="hvr-overlay" href="about.html">關於愛普</a></li>
+                <li><a class="hvr-overlay" href="projects-list.html">作品集</a></li>
+                <li><a class="hvr-overlay" href="contact.html">一起合作吧</a></li>
+                <li><a class="hvr-overlay" href="https://www.facebook.com/pg/iprc.tw" rel="external">愛普.好友好時光</a></li>
+            </ul>
+        </nav>
+    </div>     
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+<script>jQuery(document).ready(function(){jQuery("#loading").fadeOut(0)});</script>
 <script src="https://cdn.jsdelivr.net/npm/loadjs@3.6.1/dist/loadjs.umd.min.js"></script>
-<script src="script/index.js"></script>
+<script src="script/pages.js"></script>
 <script src="https://instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
 </body>
 </html>

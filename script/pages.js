@@ -1,6 +1,3 @@
-//背景影片
-loadjs('https://cdn.jsdelivr.net/npm/vide@0.5.1/dist/jquery.vide.min.js');
-
 //圖片延遲載入
 loadjs('https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js', function() {
     const observer = lozad();

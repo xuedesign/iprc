@@ -1,0 +1,169 @@
+@charset "utf-8";
+/*-- Created By
+   ##############               ###############   
+    ##############             ###############    
+    ##############             ##############     
+     ##############           ##############      
+      ##############          #############       
+       #############         ##############       
+        #############       ##############        
+        ##############      #############         
+         ###############################          
+         ###############################          
+        #################################         
+        ##############     ##############         
+       ##############       ##############        
+       ##############        ##############       
+      ##############         #######           
+     ###############          ##############      
+     ##############           ###############     
+    ######      
+    ##############              ##############    
+   ##############               ##############
+          
+                 xuedesign studio 
+             https://www.xuedesign.tw/
+*
+* @project    iPRC Official website
+* @Author     Elmo Woo <hello@xuedesign.tw>
+* @copyright  2019 xuedesign studio
+* @version    v1.0 - 201905
+*
+**/
+
+/*
+=====================================
+平板裝置(寬>長)  for-tablet-landscape-up
+=====================================
+*/
+@media (max-width:1110px) { /*1000*/
+#wrap,
+header,
+#container,
+footer,
+#tocontact,
+#company-info,
+#copyright{ min-width: 0}
+#header-main{ width: 95%; min-width: 0}
+    
+#main-nav{ width: 50%}
+#contact-us{ width: 90%}    
+}
+
+/*
+=====================================
+平板裝置(長>寬) for-tablet-portrait-up
+=====================================
+*/
+@media (max-width:800px) { /*750*/
+#main-nav{ width: 70%}    
+}
+
+/*
+=====================================
+平板裝置(7"~8"小平板) for-SnmallTablet
+=====================================
+*/
+@media (max-width: 600px) { /*573*/
+#main-nav{ width: 80%}
+#main-nav li{
+    letter-spacing: .2rem;
+    margin: 0 8px}
+#contact-us h2 a{
+    width: 180px;
+    height: 119px;
+    background-size: contain;
+    margin-top: 50px;}
+#company-address{
+    width: 65%;
+    padding: 0 0 0 20px}
+}
+
+/*
+=====================================
+手機(5"以上大螢幕) for-phone-only
+=====================================
+*/
+@media (max-width: 420px) { /*360*/
+#header-main{ 
+    position: relative;
+    padding: 20px 0 25px}
+#main-nav{ display: none}
+h1 a{
+    float: none;
+    margin: 0 auto}
+#header-main .fa-bars,
+#header-main .fa-envelope{
+    display: block;
+    position: absolute;
+    top:20px;
+    font-size: 3.5rem;
+    color: #fff}
+#header-main .fa-bars{ left: 20px}
+#header-main .fa-envelope{ right: 20px}
+#header-main .fa-bars:hover,
+#header-main .fa-envelope:hover{ color: #3e3935}
+
+#tocontact a{
+    width: 90%;
+    font-size: 1.8rem}    
+#contact-us{ padding-top: 30px}
+#contact-us h2 a{
+    float: none;
+    margin: 0 auto 30px auto}
+#company-address{
+    width: 100%;
+    padding: 0} 
+#company-address h4{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding-bottom: 8px}
+#copyright{
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    line-height: 2rem}
+}
+
+/*
+=====================================
+手機(4.7"以下小螢幕) for-phone-only
+=====================================
+*/
+@media (max-width: 321px) { /*300*/
+
+#tocontact a{
+    width: 90%;
+    font-size: 1.5rem}
+#company-info{ height: 400px}    
+#contact-us{ padding-top: 30px}
+#contact-us h2 a{
+    width: 150px;
+    height: 99px;
+    margin: 0 auto 30px auto}
+#company-address{
+    width: 100%;
+    padding: 0} 
+#company-address h4{
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding-bottom: 8px}
+#company-address p{
+    font-size: 1.3rem;
+    line-height: 2rem}    
+
+}
+
+
+/*
+=====================================
+for-retina-photo
+=====================================
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min-resolution: 2dppx),
+(-webkit-min-device-pixel-ratio: 2.0), (min-resolution: 192dpi){
+    .foot-logo,
+    #top-menu h2 a{
+        background: url(../images/logo-footer@3x.png) no-repeat;
+        background-size: cover} 
+    
+}

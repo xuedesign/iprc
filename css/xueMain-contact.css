@@ -1,0 +1,461 @@
+@charset "utf-8";
+/*-- Created By
+   ##############               ###############   
+    ##############             ###############    
+    ##############             ##############     
+     ##############           ##############      
+      ##############          #############       
+       #############         ##############       
+        #############       ##############        
+        ##############      #############         
+         ###############################          
+         ###############################          
+        #################################         
+        ##############     ##############         
+       ##############       ##############        
+       ##############        ##############       
+      ##############         #######           
+     ###############          ##############      
+     ##############           ###############     
+    ######      
+    ##############              ##############    
+   ##############               ##############
+          
+                 xuedesign studio 
+             https://www.xuedesign.tw/
+*
+* @project    iPRC Official website
+* @Author     Elmo Woo <hello@xuedesign.tw>
+* @copyright  2019 xuedesign studio
+* @version    v1.0 - 201905
+*
+*=====================================
+* 0.Reset重置
+* 1.通用設定
+* 2.網站結構
+* 3.選單設定
+*   3-1.網站主選單
+*   3-2.行動版選單
+* 4.按鈕設定
+    4-1.返回頂端
+* 5.頁面設定
+*   5-1.關於愛普
+*   5-2.專案列表
+*   5-3.專案介紹
+*   5-4.聯絡方式+版權列
+* 6.等待載入動畫
+* 7.Animate
+* 8.自訂scrollbar
+*=====================================
+**/
+
+
+/*
+=====================================
+reset重置
+=====================================
+*/
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC");
+
+/*
+=====================================
+通用設定
+=====================================
+*/
+html { font-size:62.5%; scroll-behavior: smooth}
+body{
+	margin: 0;
+	padding:0;
+    background: url(../images/bg_contact.jpg) no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+	font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;
+    font-size: 1rem; /* 1rem=10px */
+	color:#333333}
+a:link {text-decoration:none; color:#77BD1F}
+a:visited {text-decoration:none; color:#8c8c8c}
+a:hover {text-decoration:underline; color:#bd681f}
+form{margin:0; padding:0}
+image{border:0}
+.clean{ clear:both}
+.hidden{ display:none}
+
+/*頁面反白設定*/
+::selection { background: #77BD1F; color: #fff}
+::-moz-selection { background: #77BD1F; color: #fff}
+img::selection { background: transparent}
+img::-moz-selection { background: transparent}
+
+
+/*
+=====================================
+全站結構
+=====================================
+*/
+#wrap,
+header,
+#container,
+footer,
+#tocontact,
+#company-info,
+#copyright{
+    display: block;
+    width: 100%;
+    min-width: 1280px}
+#header-main{
+    display: block;
+    width: 1280px;
+    min-width: 1280px;
+    margin: 0 auto;
+    padding: 50px 0}
+
+#container{ height: 1000px}
+
+#tocontact{
+    padding: 30px 0;
+    background: #77bc1f}
+#company-info{
+    background: url(../images/bg_footer.jpg) no-repeat;
+    background-position: top center;
+    height: 438px}
+#copyright{
+    padding: 20px 0;
+    background: #3d3935;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    color: #fff}
+
+
+/*
+=====================================
+選單設定
+=====================================
+*/
+/*網站主選單*/
+#main-nav{
+    display: block;
+    float: right;
+    width: 40%;
+    text-align: right}
+#main-nav li{
+    display: inline;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    letter-spacing: .3rem;
+    margin: 0 15px}
+#main-nav a,
+#main-nav a:visited{
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 8px}
+#main-nav a:hover{
+    font-weight: 700;
+    color: #77BD1F;
+    text-decoration: none}
+.fa-facebook{
+    font-size: 1.8rem}
+.hvr-underline{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden}
+.hvr-underline:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #77BD1F;
+    height: 3px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out}
+.hvr-underline:hover:before, 
+.hvr-underline:focus:before, 
+.hvr-underline:active:before{
+    left: 0;
+    right: 0}
+#main-nav a.nowin{
+    font-weight: 700;
+    color: #77BD1F;
+    border-bottom: 3px solid #77BD1F}
+
+/*行動版選單*/
+
+/*
+=====================================
+按鈕設定
+=====================================
+*/
+/*返回頂端*/
+#toTop{
+  display:none;
+  text-decoration:none;
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  overflow:hidden;
+  width:51px;
+  height:51px;
+  border:none;
+  text-indent:100%;
+  background:url(../images/ui.totop.png) no-repeat left top}
+#toTopHover{
+  background:url(../images/ui.totop.png) no-repeat left -51px;
+  width:51px;
+  height:51px;
+  display:block;
+  overflow:hidden;
+  float:left;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter:alpha(opacity=0)}
+#toTop:active, 
+#toTop:focus {
+  outline:none}
+
+.mybtn-xl,
+.mybtn-l,
+.mybtn-m{
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    border: 2px solid;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-decoration: none}
+.mybtn-xl{ 
+    width: 180px;
+    padding: 15px 10px}
+.mybtn-l{ 
+    width: 160px;
+    padding: 15px 10px}
+.mybtn-m{ 
+    width: 120px;
+    padding: 8px 10px}
+.btn-white{
+    color: #fff;
+    border-color: #fff;
+    text-shadow: 0 0 15px #868686}
+.btn-blue{
+    color: #5e98d4;
+    border-color: #5e98d4}
+.btn-white:hover,
+.btn-blue:hover{
+    color: #fff;
+    border-color: #0d4d80;
+    background: #126db4;
+    -webkit-transition: all 0.5s ease 0s;
+    /* 變動類別;動畫時間;動畫加速屬性;延遲發生時間 */
+    -moz-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;}
+
+@keyframes mousemove {
+    0%   { margin-top: 85px }
+    50%  { margin-top: 100px }
+    100% { margin-top: 84px }
+}
+@-webkit-keyframes mousemove {
+    0%   { margin-top: 85px }
+    50%  { margin-top: 100px }
+    100% { margin-top: 84px }
+}
+
+/*
+=====================================
+首頁設定
+=====================================
+*/
+/*頁首*/
+h1 a{
+    display: block;
+    float: left;
+    width: 85px;
+    height: 31px;
+    background: url(../images/h1.png) no-repeat;
+    background-size: contain;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden}
+#header-main .fa-bars,
+#header-main .fa-envelope{ display: none}
+
+/*聯絡方式*/
+#tocontact a{
+    display: block;
+    width: 370px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    color: #fff}
+#tocontact a:hover{
+    text-decoration: none;
+    background: rgb(70, 109, 20);
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s}
+#contact-us{
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 110px}
+#contact-us h2 a{
+    display: block;
+    float: left;
+    width: 299px;
+    height: 197px;
+    background: url(../images/logo-footer.png) no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden}
+#company-address{
+    display: block;
+    float: right;
+    width: 52%;
+    padding-right: 22px}
+#company-address h4{
+    font-size: 2.3rem;
+    line-height: 3rem;
+    padding-bottom: 8px}
+#company-address p{
+    font-size: 1.5rem;
+    line-height: 2.5rem}
+
+/*
+=====================================
+等待載入動畫
+=====================================
+*/
+#loading{
+    display:block;
+	max-width:100vw;
+	height:100vh;
+    background:#609b15}
+.spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 -107px;
+    width: 214px;
+    height: 150px;
+    text-align: center}
+.spinner p{
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #fff;
+    letter-spacing: 1px}
+@keyframes ld-bounce {
+  0%, 90% {
+    animation-timing-function: linear;
+  }
+  10% {
+    animation-timing-function: cubic-bezier(0, 0.4, 0.6, 1);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 0.6);
+  }
+  0% {
+    -webkit-transform: translate(0%, 30%) scaleY(0.5);
+    transform: translate(0%, 30%) scaleY(0.5);
+  }
+  10% {
+    -webkit-transform: translate(0%, 5%) scaleY(1.1);
+    transform: translate(0%, 5%) scaleY(1.1);
+  }
+  50% {
+    -webkit-transform: translate(0%, -37%) scaleY(1.1);
+    transform: translate(0%, -37%) scaleY(1.1);
+  }
+  90% {
+    -webkit-transform: translate(0%, 5%) scaleY(1.1);
+    transform: translate(0%, 5%) scaleY(1.1);
+  }
+  100% {
+    -webkit-transform: translate(0%, 30%) scaleY(0.5);
+    transform: translate(0%, 30%) scaleY(0.5);
+  }
+}
+@-webkit-keyframes ld-bounce {
+  0%, 90% {
+    animation-timing-function: linear;
+  }
+  10% {
+    animation-timing-function: cubic-bezier(0, 0.4, 0.6, 1);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 0.6);
+  }
+  0% {
+    -webkit-transform: translate(0%, 30%) scaleY(0.5);
+    transform: translate(0%, 30%) scaleY(0.5);
+  }
+  10% {
+    -webkit-transform: translate(0%, 5%) scaleY(1.1);
+    transform: translate(0%, 5%) scaleY(1.1);
+  }
+  50% {
+    -webkit-transform: translate(0%, -37%) scaleY(1.1);
+    transform: translate(0%, -37%) scaleY(1.1);
+  }
+  90% {
+    -webkit-transform: translate(0%, 5%) scaleY(1.1);
+    transform: translate(0%, 5%) scaleY(1.1);
+  }
+  100% {
+    -webkit-transform: translate(0%, 30%) scaleY(0.5);
+    transform: translate(0%, 30%) scaleY(0.5);
+  }
+}
+.ld.ld-bounce {
+  -webkit-animation: ld-bounce 1s infinite;
+  animation: ld-bounce 1s infinite;
+}
+
+
+/*
+=====================================
+Animate
+=====================================
+*/
+
+/*
+=====================================
+自訂scrollbar
+=====================================
+*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0}
+::-webkit-scrollbar-thumb {
+  background: #6DB515;
+  border: 0px none #fff;
+  border-radius: 60px;	
+  behavior: url(PIE.htc)}
+::-webkit-scrollbar-thumb:hover {
+  background: #6DB515}
+::-webkit-scrollbar-track {
+  background: #1D1F21;
+  border: 0px none #fff;
+  border-radius: 0;
+  behavior: url(PIE.htc)}
