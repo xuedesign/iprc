@@ -39,12 +39,24 @@
 @media (max-width:1110px) { /*1000*/
 #wrap,
 header,
-#container,
+#box_service,
+#box_team,
+#box_work,
+#box_customer,
 footer,
 #tocontact,
 #company-info,
 #copyright{ min-width: 0}
 #header-main{ width: 95%; min-width: 0}
+
+#header-main{
+    display: block;
+    position: absolute;
+    top:50px;
+    left: 50%;
+    margin-left: -47%;
+    width: 95%;
+    min-width: 0}    
     
 #main-nav{ width: 50%}
 #contact-us{ width: 90%}    
@@ -85,9 +97,7 @@ footer,
 =====================================
 */
 @media (max-width: 420px) { /*360*/
-#header-main{ 
-    position: relative;
-    padding: 20px 0 25px}
+#header-main{ top:20px}
 #main-nav{ display: none}
 h1 a{
     float: none;
@@ -96,13 +106,13 @@ h1 a{
 #header-main .fa-envelope{
     display: block;
     position: absolute;
-    top:20px;
+    top:0;
     font-size: 3.5rem;
     color: #fff}
 #header-main .fa-bars{ left: 20px}
 #header-main .fa-envelope{ right: 20px}
 #header-main .fa-bars:hover,
-#header-main .fa-envelope:hover{ color: #3e3935}
+#header-main .fa-envelope:hover{ color: #77BD1F}
 
 #tocontact a{
     width: 90%;
