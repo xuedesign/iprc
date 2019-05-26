@@ -108,13 +108,13 @@ footer,
     display: block;
     width: 100%;
     min-width: 1280px}
+
 header{ 
     position: relative}
 #box_vbg{
     display: block;
     max-width:100vw;
 	height:100vh}
-
 #header-main{
     display: block;
     position: absolute;
@@ -138,6 +138,16 @@ header{
     line-height: 2.4rem;
     color: #fff}
 
+#box_service,
+#box_team,
+#box_work,
+#box_customer{
+    padding: 80px 0}
+#box_service,
+#box_work,
+#box_customer{ background: #fff}
+#box_work{ padding-bottom: 30px}
+#box_customer{ padding-top: 0}
 
 /*
 =====================================
@@ -234,25 +244,25 @@ header{
 #toTop:focus {
   outline:none}
 
-.mybtn-xl,
-.mybtn-l,
-.mybtn-m{
+.mybtn,
+.mybtn:visited{
     display: block;
-    font-size: 1.8rem;
+    width: 180px;
+    margin: 40px auto 0 auto;
+    padding: 10px 5px;
+    font-size: 1.6rem;
     font-weight: 500;
     line-height: 2.2rem;
     letter-spacing: 1px;
     text-align: center;
-    border: 2px solid;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    margin: 0 auto;
+    border: 2px solid #77bc1f;
     text-decoration: none}
-.mybtn-xl{ 
-    width: 180px;
-    padding: 15px 10px}
-.mybtn-l{ 
+.mybtn:hover{
+    color: #fff;
+    text-decoration: none;
+    background: #466d14;
+    transition-duration: .5s}
+/*.mybtn-l{ 
     width: 160px;
     padding: 15px 10px}
 .mybtn-m{ 
@@ -264,7 +274,7 @@ header{
     text-shadow: 0 0 15px #868686}
 .btn-blue{
     color: #5e98d4;
-    border-color: #5e98d4}
+    border-color: #5e98d4}*/
 .btn-white:hover,
 .btn-blue:hover{
     color: #fff;
@@ -325,9 +335,210 @@ h1 a{
     100% { bottom: 2%}
 }		
 /*服務項目*/
+#box_service h2,
+#box_work h2{
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #333333;
+    text-align: center;
+    padding-bottom: 30px}
+#container_service ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto}
+#container_service li{
+    display: inline-block;
+    flex: 2;
+    width: 300px;
+    margin: 0 1%;
+    vertical-align: top}
+#container_service h3{
+    display: table-cell;
+    width: 300px;
+    height: 60px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto}
+.service_info,
+.service_info p{
+    width: 300px;
+    height: 600px}
+.service_info{
+    display: block;
+    margin-top: 30px}
+.service_info p{
+    display: table-cell;
+    padding: 0 0 30px 30px;
+    background: rgba(0, 0, 0,.7);
+    opacity: 0;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: left;
+    vertical-align: bottom}
+.info-01{
+    background: url(../images/pic_sever-01.jpg) no-repeat}
+.info-02{
+    background: url(../images/pic_sever-02.jpg) no-repeat}
+.info-03{
+    background: url(../images/pic_sever-03.jpg) no-repeat}
+.info-04{
+    background: url(../images/pic_sever-04.jpg) no-repeat}
+.info-05{
+    background: url(../images/pic_sever-05.jpg) no-repeat}
+
+.service_item:hover>h3{
+    color: #fff;
+    background: #77BD1F;
+    transition-duration: .5s}
+.service_item:hover> .service_info p{
+    opacity: 1;
+    transition-duration: .5s}
+
 /*愛普團隊*/
+#container_team{
+    display: block;
+    width: 90%;
+    margin: 0 auto}
+#container_team h2{
+    display: block;
+    float: left;
+    width: 40%;
+    height: 500px;
+    background: url(../images/bg_teamlogo.png) no-repeat;
+    background-size: 500px 218px;
+    background-position: 0 200px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden}
+#team_info{
+    display: block;
+    float: right;
+    width: 60%}
+#team_info h3{
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 4rem;
+    color: #77bc1f;
+    padding-bottom: 18px}
+#team_info h3 span{
+    font-size: 5rem;
+    padding-right: 10px}
+#team_info h4{
+    font-size: 1.8rem;
+    font-weight: normal;
+    line-height: 3rem;
+    color: #77bc1f}
+#team_info p{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: #fff;
+    padding-bottom: 10px}
+
+#our_customer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 30px}
+#our_customer li{
+    display: block;
+    flex: 8;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: #fff;
+    padding-top: 80px}
+#our_customer li:nth-child(1){
+    background: url(../images/icon_service-01.png) no-repeat;
+    background-size: 70px 70px;
+    background-position: 30px 0}
+#our_customer li:nth-child(2){
+    background: url(../images/icon_service-02.png) no-repeat;
+    background-size: 70px 70px;
+    background-position: 30px 0}
+#our_customer li:nth-child(3){
+    background: url(../images/icon_service-03.png) no-repeat;
+    background-size: 70px 70px;
+    background-position: 30px 0}
+#our_customer li:nth-child(4){
+    background: url(../images/icon_service-04.png) no-repeat;
+    background-size: 70px 70px;
+    background-position: 30px 0}
+#our_customer li:nth-child(5){
+    background: url(../images/icon_service-05.png) no-repeat;
+    background-size: 70px 70px;
+    background-position: 30px 0}
+#our_customer li:nth-child(6){
+    background: url(../images/icon_service-06.png) no-repeat;
+    background-size: 70px 70px;
+    background-position: 30px 0}
+#our_customer li:nth-child(7){
+    background: url(../images/icon_service-07.png) no-repeat;
+    background-size: 70px 70px;
+    background-position: 30px 0}
+#our_customer li:nth-child(8){
+    background: url(../images/icon_service-08.png) no-repeat;
+    background-size: 70px 70px;
+    background-position: 30px 0}
+
 /*專案展示*/
+#container_work{
+    display: block;
+    width: 90%;
+    margin: 0 auto}
+#container_work ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 5;
+    text-align: center}
+#container_work li{
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 180px;
+    margin: 1.2%}
+#container_work img{
+    display: block;
+    width: 100%;
+    height: auto}
+#container_work p{
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 300px;
+    height: 180px;
+    padding: 10px;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #fff}
+#container_work p:hover{
+    opacity: 1;
+    transition-duration: .5s}
+#container_work p>span{
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    right: 5%;
+    bottom: 40%;
+    margin: 0}
+
 /*客戶列表*/
+#container_customer{
+    display: block;
+    width: 1600px;
+    margin: 0 auto}
+#container_customer img{
+    display: inline-block;
+    margin: 0;
+    padding: 0}
 /*聯絡方式*/
 #tocontact a{
     display: block;
