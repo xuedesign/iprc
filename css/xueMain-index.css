@@ -58,7 +58,7 @@ reset重置
 =====================================
 */
 @import url("reset.css");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,400,700&display=swap");
 
 /*
 =====================================
@@ -429,21 +429,21 @@ h1 a{
     font-size: 5rem;
     padding-right: 10px}
 #team_info h4{
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: normal;
     line-height: 3rem;
     color: #77bc1f}
 #team_info p{
     font-size: 1.5rem;
-    line-height: 2.4rem;
+    line-height: 2.2rem;
     color: #fff;
-    padding-bottom: 10px}
+    padding-bottom: 15px}
 
 #our_customer{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 30px}
+    padding-top: 40px}
 #our_customer li{
     display: block;
     flex: 8;
