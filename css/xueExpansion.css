@@ -31,6 +31,55 @@
 *
 **/
 
+/*
+=====================================
+頂端浮動選單
+=====================================
+*/
+#top-bar{
+    position:fixed;
+	top:-65px;
+    z-index: 1000;
+	width:100%;
+	height:60px;
+	background:rgba(0, 0, 0, .6)}
+#menu{
+    width:1240px; 
+    margin:0 auto; 
+    line-height:50px}
+#menu h3 a{
+    display: block;
+    float: left;
+    width: 85px;
+    height: 31px;
+    background: url(../images/h1.png) no-repeat;
+    background-size: contain;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 13px;
+    padding: 0}
+
+#menu ul{
+    display: block;
+    float: left;
+    padding-left: 30px}
+#menu li{
+    display: inline;
+    font-size: 1.6rem;
+    line-height: 65px;
+    color: #fff}
+#menu a{
+    letter-spacing: 1px;
+    color:#fff; 
+    text-decoration: none;
+    padding:0 20px}
+#menu a:visited{
+    color:#fff; 
+    text-decoration: none}
+#menu a:hover{
+    color:#77bd1f; 
+    text-decoration: none}
 
 /*
 =====================================

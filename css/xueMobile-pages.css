@@ -45,9 +45,11 @@ footer,
 #company-info,
 #copyright{ min-width: 0}
 #header-main{ width: 95%; min-width: 0}
-    
+
+#menu{ width: 90%}
 #main-nav{ width: 50%}
-#contact-us{ width: 90%}    
+#contact-us{ width: 90%}
+   
 }
 
 /*
@@ -65,6 +67,7 @@ footer,
 =====================================
 */
 @media (max-width: 600px) { /*573*/
+#menu a{ padding:0 10px}
 #main-nav{ width: 80%}
 #main-nav li{
     letter-spacing: .2rem;
@@ -85,9 +88,12 @@ footer,
 =====================================
 */
 @media (max-width: 420px) { /*360*/
+#top-bar{ display: none}    
 #header-main{ 
-    position: relative;
-    padding: 20px 0 25px}
+    position:fixed;
+    width: 100%;
+    padding: 20px 0 25px;
+    background:rgba(0, 0, 0, .3)}
 #main-nav{ display: none}
 h1 a{
     float: none;
