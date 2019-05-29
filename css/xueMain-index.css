@@ -345,6 +345,7 @@ h1 a{
 #container_service ul{
     display: flex;
     flex-wrap: wrap;
+    justify-content:space-between;
     width: 90%;
     margin: 0 auto}
 #container_service li{
@@ -442,6 +443,7 @@ h1 a{
 #our_customer{
     display: flex;
     flex-wrap: wrap;
+    justify-content:space-between;
     width: 100%;
     padding-top: 40px}
 #our_customer li{
@@ -493,6 +495,7 @@ h1 a{
 #container_work ul{
     display: flex;
     flex-wrap: wrap;
+    justify-content:space-between;
     flex: 5;
     text-align: center}
 #container_work li{

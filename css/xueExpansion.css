@@ -156,18 +156,6 @@
 .overlay ul li a:focus {
 	color: rgba(119, 189, 31, 1)}
 
-/*.sub-overlay li{
-        display: block;
-        float: left;
-        margin: 0 15px;
-        padding: 0}
-.overlay .sub-overlay a:hover{
-        color: rgb(145, 114, 40);
-        background: none}
-.overlay .sub-overlay a:focus{
-        color: rgba(255, 255, 255, .8);
-        background: none}*/
-
 .hvr-overlay{
     display: inline-block;
     vertical-align: middle;
