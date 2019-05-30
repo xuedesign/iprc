@@ -111,8 +111,6 @@ footer,
     margin: 0 auto;
     padding: 50px 0}
 
-#container{ height: 1000px}
-
 #tocontact{
     padding: 30px 0;
     background: #77bc1f}
@@ -127,6 +125,27 @@ footer,
     font-size: 1.3rem;
     line-height: 2.4rem;
     color: #fff}
+
+#box_contact{
+    display: block;
+    width: 1280px;
+    padding-top: 100px;
+    margin: 0 auto 100px auto}
+#company-contact{
+    display: block;
+    float: left;
+    width: 34%}
+#company-form{
+    display: block;
+    float: right;
+    width: 65%}
+#box_contact::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0}
 
 
 /*
@@ -228,17 +247,30 @@ footer,
 .mybtn-l,
 .mybtn-m{
     display: block;
-    font-size: 1.8rem;
-    font-weight: 500;
+    float: right;
+    font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
     line-height: 2.2rem;
     letter-spacing: 1px;
     text-align: center;
-    border: 2px solid;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    color: #fff;
+    background: #77bc1f;
+    border: none;
     margin: 0 auto;
-    text-decoration: none}
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px}
+#company-form .mybtn-m{ text-decoration: none}
+#company-form .mybtn-m:hover{ 
+    background: rgb(70, 109, 20);
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s}
 .mybtn-xl{ 
     width: 180px;
     padding: 15px 10px}
@@ -246,24 +278,8 @@ footer,
     width: 160px;
     padding: 15px 10px}
 .mybtn-m{ 
-    width: 120px;
+    width: 100px;
     padding: 8px 10px}
-.btn-white{
-    color: #fff;
-    border-color: #fff;
-    text-shadow: 0 0 15px #868686}
-.btn-blue{
-    color: #5e98d4;
-    border-color: #5e98d4}
-.btn-white:hover,
-.btn-blue:hover{
-    color: #fff;
-    border-color: #0d4d80;
-    background: #126db4;
-    -webkit-transition: all 0.5s ease 0s;
-    /* 變動類別;動畫時間;動畫加速屬性;延遲發生時間 */
-    -moz-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;}
 
 @keyframes mousemove {
     0%   { margin-top: 85px }
@@ -338,6 +354,60 @@ h1 a{
 #company-address p{
     font-size: 1.5rem;
     line-height: 2.5rem}
+
+/*聯絡我們*/
+#company-contact h3{
+    font-size: 2.6rem;
+    line-height: 4rem;
+    color: #77bc1f}
+#company-contact p,
+#company-contact .myemail a{
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+    color: #fff;
+    text-decoration: none}
+#company-contact .myemail{ padding-bottom: 80px}
+#company-contact .myemail a:hover{
+    color: #77bc1f;
+    text-decoration: none}
+
+#mymap{
+    display: block;
+    width: 80%;
+    height: 350px;
+    margin-top: 30px}
+#mymap,
+#company-contact p{ padding-left: 2%}
+
+#my_form label{
+    display: inline-block;
+    width: 25%;
+    padding: 17px 16px 17px 0;
+    margin-bottom: 30px;
+    background: #77bc1f;
+    /*font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;*/
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: right;
+    -webkit-border-radius: 8px 0 0 8px;
+    -moz-border-radius: 8px 0 0 8px;
+    border-radius: 8px 0 0 8px}
+#my_form input{
+    display: inline-block;
+    float: right;
+    width: 75%;
+    padding: 16px 16px;
+    margin-bottom: 30px;
+    background: #fff;
+    font-size: 1.5rem;
+    color: #333;
+    border: none;
+    -webkit-border-radius: 0 8px 8px 0;
+    -moz-border-radius: 0 8px 8px 0;
+    border-radius: 0 8px 8px 0}
+#my_form img{ 
+    display: block;
+    margin: 0 auto 30px}
 
 /*
 =====================================

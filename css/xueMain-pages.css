@@ -143,8 +143,17 @@ header{ background: #77bc1f}
 #box_team,
 #box_belief,
 #box_strategy,
-#box_strength{ background: #fff}
+#box_strength{ background: #F7F8F8}
 
+#filters{
+    display: block;
+    width: 65%;
+    margin: 0 auto 30px auto}
+.grid,
+#project-main,
+#maybelike{
+    display: block;
+    width: 1660px}
 
 /*
 =====================================
@@ -452,14 +461,6 @@ h1 a{
     color: #77bd1f}
 
 /*作品集*/
-#filters{
-    display: block;
-    width: 65%;
-    margin: 0 auto 30px auto}
-/*#filters h3{
-    font-size: 1.8rem;
-    line-height: 3rem;
-    padding-bottom: 8px}*/
 .button{
     display: inline-block;
     padding: 0.5rem 1.0rem;
@@ -492,11 +493,6 @@ h1 a{
   margin: 0 10px}
 
 /* ---- isotope ---- */
-.grid,
-#project-main,
-#maybelike{
-    display: block;
-    width: 1660px}
 .grid{
     min-height: 500px;
     margin: 0 auto 30px auto}
