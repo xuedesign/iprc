@@ -97,6 +97,7 @@ footer,
 #main-nav{ display: none}
 h1 a{
     float: none;
+    background: url(../images/h1.png) no-repeat;
     margin: 0 auto}
 #header-main .fa-bars,
 #header-main .fa-envelope{

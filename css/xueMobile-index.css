@@ -33,6 +33,74 @@
 
 /*
 =====================================
+大筆電
+=====================================
+*/
+@media (max-width:1500px) {
+#container_service li,
+#container_service h3,
+.service_info,
+.service_info p{ width: 225px}
+.service_info,
+.service_info p{ height: 450px}
+.info-01,
+.info-02,
+.info-03,
+.info-04,
+.info-05{ background-position: top center}
+#container_team h2{
+    background-size: 400px 174px;
+    background-position: 0 200px}
+#container_work li,
+#container_work .work-title{
+    width: 225px;
+    height: 135px}
+#container_work li{ margin: 1%}
+#container_work .work-title>span{
+    top: 30%;
+    bottom: 20%}
+#container_customer{
+    width: 100%}
+#container_customer img{
+    width: 33%;
+    height: auto}
+}
+
+@media (max-width:1400px) {
+#container_service li,
+#container_service h3,
+.service_info,
+.service_info p{ width: 200px}
+.service_info,
+.service_info p{ height: 400px}
+#our_customer li{ font-size: 1.35rem}
+#our_customer li:nth-child(1),
+#our_customer li:nth-child(2),
+#our_customer li:nth-child(3),
+#our_customer li:nth-child(4),
+#our_customer li:nth-child(5),
+#our_customer li:nth-child(6),
+#our_customer li:nth-child(7),
+#our_customer li:nth-child(8){ 
+    background-size: 60px 60px;
+    background-position: top center}
+#container_work li,
+#container_work .work-title{
+    width: 215px;
+    height: 129px}
+#container_work li{ margin: 1%}
+#container_work .work-title>span{
+    top: 20%;
+    bottom: 20%}
+#container_customer{
+    width: 100%}
+#container_customer img{
+    width: 33%;
+    height: auto}
+}
+
+/*
+=====================================
 平板裝置(寬>長)  for-tablet-landscape-up
 =====================================
 */
@@ -57,9 +125,36 @@ footer,
     margin-left: -47%;
     width: 95%;
     min-width: 0}    
-    
-#main-nav{ width: 50%}
-#contact-us{ width: 90%}    
+#main-nav{ width: 60%}
+#contact-us{ width: 90%}
+
+#container_service ul{ width: 95%}
+#container_service li{ margin: 0 .5%}
+#container_service h3{ font-size: 1.5rem}
+#container_service li,
+#container_service h3,
+.service_info,
+.service_info p{ width: 165px}
+.service_info,
+.service_info p{ height: 400px}
+.service_info p{ 
+    padding: 0 0 10px 10px}
+
+#container_team h2,
+#team_info{ float: none; width: 100%}
+#container_team h2{
+    height: 200px;
+    background-position: 50% 0;
+    margin: 0 auto 30px auto}
+
+#container_work ul{ flex: 3}
+#container_work li,
+#container_work .work-title{
+    width: 285px;
+    height: 171px}
+#container_work .work-title>span{
+    top: 30%;
+    bottom: 30%}
 }
 
 /*
@@ -68,7 +163,31 @@ footer,
 =====================================
 */
 @media (max-width:800px) { /*750*/
-#main-nav{ width: 70%}    
+#main-nav{ width: 70%}
+
+#container_service ul{ justify-content:center}
+#container_service li{ margin: 0 .5% 30px}
+#container_service li:nth-child(4){ 
+    margin: 0 .5% 30px 100px}
+#container_service li,
+#container_service h3,
+.service_info,
+.service_info p{ width: 230px}
+.service_info,
+.service_info p{ height: 400px}
+.service_info p{ 
+    padding: 0 0 10px 10px}
+    
+#container_work ul{ flex: 2}
+#container_work li{ 
+    margin: 1%;
+    width: 48%}
+#container_work .work-title{ width: 100%}
+#container_work li,
+#container_work .work-title{ height: 100%}
+#container_work .work-title>span{
+    top: 35%;
+    bottom: 35%}
 }
 
 /*
@@ -90,6 +209,24 @@ footer,
 #company-address{
     width: 65%;
     padding: 0 0 0 20px}
+
+#container_service li,
+#container_service h3,
+.service_info,
+.service_info p{ 
+    width: 270px}
+#container_service li:nth-child(4){ 
+    margin: 0 .5% 30px 0}
+
+#our_customer{
+    display: block;
+    width: 94%;
+    margin: 0 auto}
+#our_customer li{
+    display: inline-block;
+    width: 120px;
+    margin-bottom: 30px;
+    padding-top: 70px}
 }
 
 /*
@@ -99,14 +236,6 @@ footer,
 */
 @media (max-width: 420px) { /*360*/
 #top-bar{ display: none}
-/*#header-main{
-    display: block;
-    position: absolute;
-    top:50px;
-    left: 50%;
-    margin-left: -47%;
-    width: 95%;
-    min-width: 0}    */
 #header-main{ 
     position:fixed;
     top:0;
@@ -114,9 +243,10 @@ footer,
     z-index: 999;
     margin: 0;
     width: 100%;
-    padding: 20px 0 25px;
-    background:rgba(0, 0, 0, .5)}
-
+    padding: 20px 30px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;}
 #main-nav{ display: none}
 h1 a{
     float: none;
@@ -132,6 +262,24 @@ h1 a{
 #header-main .fa-envelope{ right: 20px}
 #header-main .fa-bars:hover,
 #header-main .fa-envelope:hover{ color: #77BD1F}
+
+#container_service ul{
+    display: block;
+    width: 95%;
+    margin: 0 auto}
+#container_service li{
+    display: block;
+    margin: 0 0 30px 0}
+#container_service li,
+#container_service h3,
+.service_info,
+.service_info p{
+    width: 100%}
+.service_info,
+.service_info p{ 
+    height: 500px}
+#container_service li:nth-child(4){ 
+    margin: 0 0 30px 0}
 
 #tocontact a{
     width: 90%;
