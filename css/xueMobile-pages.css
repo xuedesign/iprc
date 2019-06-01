@@ -31,6 +31,34 @@
 *
 **/
 
+@media (max-width:1500px) {
+#filters{
+    display: block;
+    width: 90%;
+    margin: 0 auto 30px auto}
+.grid,
+#project-main,
+#maybelike{
+    display: block;
+    width: 95%;
+    margin: 0 auto} 
+.grid-item{ margin: 15px 18px}
+#project-main img{
+    display: block;
+    width: 100%;
+    height: auto}
+}
+
+@media (max-width:1400px) {
+#box_establish img{
+    width: 95%;
+    height: auto} 
+#filters{ width: 95%}
+.grid-item{ margin: 15px 8px}
+}
+
+
+
 /*
 =====================================
 平板裝置(寬>長)  for-tablet-landscape-up
@@ -43,12 +71,33 @@ header,
 footer,
 #tocontact,
 #company-info,
-#copyright{ min-width: 0}
+#copyright,
+#box_imagewall,
+#box_establish,
+#box_team,
+#box_belief,
+#box_strategy,
+#box_strength{ min-width: 0}
 #header-main{ width: 95%; min-width: 0}
 
 #menu{ width: 90%}
 #main-nav{ width: 50%}
 #contact-us{ width: 90%}
+
+#box_imagewall img,
+#box_establish img,
+#box_belief img{
+    width: 95%;
+    height: auto} 
+#team_main{ width: 95%}
+#team_main .team-word{ margin: 0 100px}
+.line{
+    width: 95%;
+    height: 32px;
+    background-size: contain}
+#filters{ width: 90%; margin: 0 auto}
+#filters a{margin-bottom: 20px}
+.grid-item{ margin: 15px 10px}
    
 }
 
@@ -58,7 +107,29 @@ footer,
 =====================================
 */
 @media (max-width:800px) { /*750*/
-#main-nav{ width: 70%}    
+#main-nav{ width: 70%}
+
+#box_strategy img,
+#box_strength img{ 
+    width: 95%;
+    height: auto}
+#team_main li{
+    display: block;
+    width: 95%;
+    margin: 0 auto}
+#team_main li>img{
+    float: none;
+    padding: 0;
+    margin: 0 auto}
+#team_main .team-word{ margin: 0 50px}
+.team-service{
+    float: none;
+    width: 95%;
+    min-height: 0;
+    padding-right: 0;
+    margin: 0 auto 20px auto;
+    text-align: center}
+.grid-item{ margin: 15px 30px}
 }
 
 /*
@@ -80,6 +151,20 @@ footer,
 #company-address{
     width: 65%;
     padding: 0 0 0 20px}
+    
+#box_imagewall,
+#box_establish{ display: none}
+.grid-item{
+    display: inline-block;
+    width: 95%;
+    height: 700px;
+    margin: 15px;
+    background: #fff;
+    padding: 10px}
+.grid-item img{
+    display: block;
+    width: 280px;
+    height: 415px}
 }
 
 /*
@@ -91,6 +176,7 @@ footer,
 #top-bar{ display: none}    
 #header-main{ 
     position:fixed;
+    z-index: 999;
     width: 100%;
     padding: 20px 0 25px;
     background:rgba(0, 0, 0, .3)}
@@ -98,6 +184,7 @@ footer,
 h1 a{
     float: none;
     background: url(../images/h1.png) no-repeat;
+    background-size: contain;
     margin: 0 auto}
 #header-main .fa-bars,
 #header-main .fa-envelope{
@@ -129,6 +216,16 @@ h1 a{
     padding: 20px 50px;
     font-size: 1.2rem;
     line-height: 2rem}
+    
+#container{ padding-top: 110px}
+#team_main .team-word{ margin: 0 30px}
+#box_strength h4{ padding: 50px 20px 0}
+    
+.grid-item img{ margin: 0 auto}
+.btn_previous,
+.btn_next{ display: none}
+#bar_PageNumber span{ padding: 0 15px}
+    
 }
 
 /*
@@ -137,7 +234,6 @@ h1 a{
 =====================================
 */
 @media (max-width: 321px) { /*300*/
-
 #tocontact a{
     width: 90%;
     font-size: 1.5rem}
@@ -156,7 +252,11 @@ h1 a{
     padding-bottom: 8px}
 #company-address p{
     font-size: 1.3rem;
-    line-height: 2rem}    
+    line-height: 2rem}  
+.grid-item img{ 
+    width: 262px;
+    height: 388px;
+    margin: 0 auto}
 
 }
 

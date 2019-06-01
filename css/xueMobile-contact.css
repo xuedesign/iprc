@@ -44,11 +44,35 @@ footer,
 #tocontact,
 #company-info,
 #copyright{ min-width: 0}
-#header-main{ width: 95%; min-width: 0}
+#header-main,
+#box_contact{ width: 95%; min-width: 0}
 
 #menu{ width: 90%}
 #main-nav{ width: 50%}
-#contact-us{ width: 90%}    
+#contact-us{ width: 90%}
+    
+#company-contact,
+#company-form{
+    display: block;
+    float: none;
+    width: 95%;
+    margin: 0 auto}
+#company-contact{ padding-bottom: 30px}
+#contact_left{
+    display: block;
+    float: left;
+    width: 30%}
+#contact_right{
+    display: block;
+    float: right;
+    width: 69%}
+#company-contact::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0}
 }
 
 /*
@@ -79,6 +103,8 @@ footer,
 #company-address{
     width: 65%;
     padding: 0 0 0 20px}
+#contact_left{ width: 40%}
+#contact_right{ width: 59%}
 }
 
 /*
@@ -127,6 +153,35 @@ h1 a{
     padding: 20px 50px;
     font-size: 1.2rem;
     line-height: 2rem}
+    
+#contact_left,
+#contact_right{ 
+    display: block;
+    float: none;
+    width: 95%;
+    margin: 0 auto}
+#contact_left{ padding-bottom: 20px}
+#company-contact .myemail{ padding-bottom: 0}
+
+#my_form label{
+    display: table;
+    width: 35%;
+    padding: 8px 10px 8px 0;
+    margin: 15px 0 15px 0;
+    text-align: center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px}
+#my_form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px}
+.mybtn-m{
+    float: none;
+    margin: 0 auto}
 }
 
 /*
@@ -154,7 +209,8 @@ h1 a{
     padding-bottom: 8px}
 #company-address p{
     font-size: 1.3rem;
-    line-height: 2rem}    
+    line-height: 2rem}
+#my_form label{ width: 50%}
 
 }
 
