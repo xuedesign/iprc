@@ -127,7 +127,7 @@ header{
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    background: rgba(0, 0, 0, .6)}
+    background: rgba(0, 0, 0, .3)}
 #tocontact{
     padding: 30px 0;
     background: #77bc1f}
@@ -518,7 +518,7 @@ h1 a{
 #container_work .work-title>span{
     display: block;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 5%;
     right: 5%;
     bottom: 40%;

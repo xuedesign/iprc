@@ -267,19 +267,45 @@ h1 a{
     display: block;
     width: 95%;
     margin: 0 auto}
-#container_service li{
-    display: block;
-    margin: 0 0 30px 0}
 #container_service li,
+#container_service li:nth-child(4){
+    display: block;
+    width: 300px;
+    margin: 0 auto 30px auto}
 #container_service h3,
 .service_info,
 .service_info p{
-    width: 100%}
+    width: 300px;
+    margin: 0 auto}
 .service_info,
 .service_info p{ 
-    height: 500px}
-#container_service li:nth-child(4){ 
-    margin: 0 0 30px 0}
+    height: 350px}
+.service_info p{ 
+    padding: 0 0 20px 20px}
+    
+#container_team h2{
+    height: 100px;
+    background-size: contain;
+    background-position: 50% 0;
+    margin: 0 auto 30px auto}
+#our_customer{
+    display: block;
+    width: 100%;
+    margin: 0 auto}
+#our_customer li{
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 30px;
+    padding-top: 70px}
+
+#container_work ul{ flex: 1}
+#container_work li{ 
+    margin: 1%;
+    width: 100%}
+    
+#container_customer img{
+    width: 100%;
+    height: auto}
 
 #tocontact a{
     width: 90%;
