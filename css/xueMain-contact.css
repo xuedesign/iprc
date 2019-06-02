@@ -379,8 +379,20 @@ h1 a{
 #mymap,
 #company-contact p{ padding-left: 2%}
 
+#my_form .form-item{
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 49px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px
+}
 #my_form label{
-    display: inline-block;
+    display: block;
+    float: left;
     width: 25%;
     padding: 17px 16px 17px 0;
     margin-bottom: 30px;
@@ -393,20 +405,17 @@ h1 a{
     -moz-border-radius: 8px 0 0 8px;
     border-radius: 8px 0 0 8px}
 #my_form input{
-    display: inline-block;
+    display: block;
     float: right;
-    width: 75%;
-    padding: 16px 16px;
-    margin-bottom: 30px;
-    background: #fff;
+    width: 70%;
+    height: 45px;
     font-size: 1.5rem;
     color: #333;
-    border: none;
-    -webkit-border-radius: 0 8px 8px 0;
-    -moz-border-radius: 0 8px 8px 0;
-    border-radius: 0 8px 8px 0}
+    border: none}
 #my_form img{ 
     display: block;
+    width: 160px;
+    height: 60px;
     margin: 0 auto 30px}
 
 /*

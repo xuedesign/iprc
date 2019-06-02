@@ -94,7 +94,8 @@
 	top: 0;
 	left: 0;
     z-index: 9999;
-    background: rgba(18,23,29,.7)}
+    background: #77BD1F
+    /*background: rgba(18,23,29,.7)*/}
 
 /* Overlay closing cross */
 .overlay .overlay-close{
@@ -119,14 +120,22 @@
 .overlay nav {
 	text-align: center;
 	position: relative;
-	top: 50%;
+	top: 47%;
 	height: 60%;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%)}
-
+.overlay nav .ilogo{
+    display: block; 
+    width:150px; 
+    height: 75px;
+    background: url(../images/loading.png) no-repeat;
+    background-size: 150px 55px;
+    background-position: top center;
+    margin: 0 auto}
 .overlay ul {
+    border-top: 2px solid #fff;
 	list-style: none;
-	padding: 0;
+	padding: 30px 0 0 0;
 	margin: 0 auto;
 	display: inline-block;
 	height: 80%;
@@ -154,7 +163,7 @@
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-	color: rgba(119, 189, 31, 1)}
+	color: #466d14}
 
 .hvr-overlay{
     display: inline-block;
@@ -171,7 +180,7 @@
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: rgba(119, 189, 31, 1);
+    background: #466d14;
     height: 3px;
     -webkit-transition-property: left, right;
     transition-property: left, right;

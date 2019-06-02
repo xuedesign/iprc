@@ -243,6 +243,12 @@ footer,
 =====================================
 */
 @media (max-width: 420px) { /*360*/
+#box_service,
+#box_team,
+#box_work,
+#box_customer{
+    padding: 30px 0}
+#box_work{ padding-bottom: 10px}
 #top-bar{ display: none}
 #header-main{ 
     position:fixed;

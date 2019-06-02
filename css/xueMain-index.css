@@ -113,7 +113,7 @@ header{
     position: relative}
 #box_vbg{
     display: block;
-    max-width:100vw;
+    max-width: 100vw;
 	height:100vh}
 #header-main{
     display: block;
@@ -489,7 +489,7 @@ h1 a{
 #container_work ul{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: center;
     flex: 5;
     text-align: center}
 #container_work li{

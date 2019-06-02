@@ -59,13 +59,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div id="wrap">
         <header>
-            <div id="box_vbg" 
-                data-vide-bg="
-                mp4: video/iPRC-showreel.mp4,
-                webm: video/iPRC-showreel.webm,
-                ogv: video/iPRC-showreel.ogv,
-                poster: video/iPRC-showreel.jpg"
-                data-vide-options="posterType: jpg, loop: true, muted: false, position: top center"></div>
+            <div id="box_vbg">
+                <video class="covervid-video" autoplay loop poster="video/iPRC-showreel.jpg">
+                    <source src="video/iPRC-showreel.webm" type="video/webm">
+                    <source src="video/iPRC-showreel.mp4" type="video/mp4">
+                </video>
+            </div>
                 <!--
                 mp4: https://xuedesign.github.io/iprc/video/iPRC-showreel.mp4,
                 webm: https://xuedesign.github.io/iprc/video/iPRC-showreel.webm,
@@ -383,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
 <script>jQuery(document).ready(function(){jQuery("#loading").fadeOut(0)});</script>
 <script src="https://cdn.jsdelivr.net/npm/loadjs@3.6.1/dist/loadjs.umd.min.js"></script>
-<script src="script/index.js"></script>
+<script src="script/index-test.js"></script>
 <script src="https://instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
 </body>
 </html>

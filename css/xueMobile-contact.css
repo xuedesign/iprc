@@ -163,8 +163,15 @@ h1 a{
 #contact_left{ padding-bottom: 20px}
 #company-contact .myemail{ padding-bottom: 0}
 
+#my_form .form-item{
+    background: none;
+    height: auto;
+    padding-right: 0 }
+#my_form label,
+#my_form input{
+        float: none}
 #my_form label{
-    display: table;
+    display: block;
     width: 35%;
     padding: 8px 10px 8px 0;
     margin: 15px 0 15px 0;
@@ -175,6 +182,10 @@ h1 a{
 #my_form input{
     display: block;
     width: 100%;
+    padding: 16px 16px;
+    -webkit-padding: 16px 16px;
+    margin-bottom: 15px;
+    background: #fff;
     margin-bottom: 40px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
