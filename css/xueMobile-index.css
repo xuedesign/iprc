@@ -37,6 +37,7 @@
 =====================================
 */
 @media (max-width:1500px) {
+#header-main{ padding: 30px 9.5%}    
 #container_service li,
 #container_service h3,
 .service_info,
@@ -67,6 +68,7 @@
 }
 
 @media (max-width:1400px) {
+#header-main{ padding: 30px 6%}      
 #container_service li,
 #container_service h3,
 .service_info,
@@ -120,10 +122,10 @@ footer,
 #header-main{
     display: block;
     position: absolute;
-    top:50px;
+    /*top: 50px;
     left: 50%;
     margin-left: -47%;
-    width: 95%;
+    width: 95%;*/
     min-width: 0}    
 #main-nav{ width: 60%}
 #contact-us{ width: 90%}
