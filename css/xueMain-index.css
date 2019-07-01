@@ -77,7 +77,7 @@ body{
 	color:#333333}
 a:link {text-decoration:none; color:#77BD1F}
 a:visited {text-decoration:none; color:#8c8c8c}
-a:hover {text-decoration:underline; color:#bd681f}
+a:hover {text-decoration:none; color:#bd681f}
 form{margin:0; padding:0}
 image{border:0}
 .clean{ clear:both}
@@ -170,8 +170,14 @@ header{
     float: right;
     width: 40%;
     text-align: right}
+#main-nav ul{
+    display: block;
+    position: absolute;
+    top:25px;
+    right:15%}
 #main-nav li{
     display: inline;
+    position:relative;
     font-size: 1.6rem;
     line-height: 2.3rem;
     letter-spacing: .3rem;
@@ -219,6 +225,53 @@ header{
     font-weight: 700;
     color: #77BD1F;
     border-bottom: 3px solid #77BD1F}
+
+#main-nav li ul{ display: none}
+#main-nav li:hover ul{display: block}
+#main-nav li li{
+    display: block;
+    width: 100px;
+    height: 30px}
+#main-nav li:hover li a,
+#main-nav li.iehover li a{
+    display: block;
+    float: none;
+    position: absolute;
+    top: 10px;
+    right: -300px;
+    z-index: 1000;
+    list-style: circle;
+    width: 350px/*210px*/;
+    height: 30px;
+    padding-left: 10px;
+	/*background: rgba(106,203,243,.9);*/
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    line-height: 2.25rem;
+    text-align: left;
+    color: #77BD1F;
+    /*border-bottom: 1px dashed #fff*/}
+#main-nav li:hover li .linesmall,
+#main-nav li.iehover li .linesmall{
+    padding-top: 8px;
+    line-height: 3rem}
+#main-nav li:hover li a:hover,
+#main-nav li:hover li:hover a,
+#main-nav li.iehover li a:hover,
+#main-nav li.iehover li.iehover a {
+    font-weight: bold;
+    color: #fff;
+	/*background: rgb(24,145,197)*/}
+#main-nav li li.subtitle a,
+#main-nav li li.subtitle a:hover{
+    display: block;
+    width: 210px;
+	float: none;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    /*background: rgb(24,145,197)*/}
 
 /*行動版選單*/
 
@@ -406,18 +459,18 @@ h1 a{
 #container_team h2{
     display: block;
     float: left;
-    width: 40%;
+    width: 50%;
     height: 500px;
     background: url(../images/bg_teamlogo.png) no-repeat;
     background-size: 500px 218px;
-    background-position: 0 200px;
+    background-position: 150px 200px;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden}
 #team_info{
     display: block;
     float: right;
-    width: 60%}
+    width: 50%}
 #team_info h3{
     font-size: 2.4rem;
     font-weight: normal;
@@ -428,15 +481,17 @@ h1 a{
     font-size: 5rem;
     padding-right: 10px}
 #team_info h4{
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: normal;
     line-height: 3rem;
     color: #77bc1f}
 #team_info p{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2.2rem;
     color: #fff;
-    padding-bottom: 15px}
+    padding-bottom: 20px}
+#team_info .txt_import-01{ font-size: 2.4rem}
+#team_info .txt_import-02{ font-size: 2rem; line-height: 3rem}
 
 #our_customer{
     display: flex;

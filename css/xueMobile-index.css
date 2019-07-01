@@ -37,7 +37,8 @@
 =====================================
 */
 @media (max-width:1500px) {
-#header-main{ padding: 30px 9.5%}    
+#header-main{ padding: 30px 9.5%}
+#main-nav ul{ right:10%}    
 #container_service li,
 #container_service h3,
 .service_info,
@@ -128,6 +129,7 @@ footer,
     width: 95%;*/
     min-width: 0}    
 #main-nav{ width: 60%}
+#main-nav ul{ right:5%}       
 #contact-us{ width: 90%}
 
 #container_service ul{ width: 95%}
