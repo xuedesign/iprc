@@ -5,62 +5,7 @@ loadjs('https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js', function() {
 });
 
 //頂端浮動選單
-$(function(){$(window).load(function(){$(window).bind("scroll resize",function(){var o=$(this),t=o.scrollTop();180>t&&$("#top-bar").stop().animate({top:"-65px"}),t>180&&$("#top-bar").stop().animate({top:"0px"})}).scroll()})});
-
-//篩選效果
-loadjs('https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', function() {
-    var $grid = $('.grid').isotope({
-      itemSelector: '.grid-item',
-      layoutMode: 'fitRows',
-      getSortData: {
-        name: '.name',
-        symbol: '.symbol',
-        number: '.number parseInt',
-        category: '[data-category]',
-        weight: function( itemElem ) {
-          var weight = $( itemElem ).find('.weight').text();
-          return parseFloat( weight.replace( /[\(\)]/g, '') );
-        }
-      }
-    });
-
-    // filter functions
-    var filterFns = {
-      // show if number is greater than 50
-      numberGreaterThan50: function() {
-        var number = $(this).find('.number').text();
-        return parseInt( number, 10 ) > 50;
-      },
-      // show if name ends with -ium
-      ium: function() {
-        var name = $(this).find('.name').text();
-        return name.match( /ium$/ );
-      }
-    };
-
-    // bind filter button click
-    $('#filters').on( 'click', 'a', function() {
-      var filterValue = $( this ).attr('data-filter');
-      // use filterFn if matches value
-      filterValue = filterFns[ filterValue ] || filterValue;
-      $grid.isotope({ filter: filterValue });
-    });
-
-    // bind sort button click
-    $('#sorts').on( 'click', 'a', function() {
-      var sortByValue = $(this).attr('data-sort-by');
-      $grid.isotope({ sortBy: sortByValue });
-    });
-
-    // change is-checked class on buttons
-    $('.button-group').each( function( i, buttonGroup ) {
-      var $buttonGroup = $( buttonGroup );
-      $buttonGroup.on( 'click', 'a', function() {
-        $buttonGroup.find('.is-checked').removeClass('is-checked');
-        $( this ).addClass('is-checked');
-      });
-    });
-});
+//$(function(){$(window).load(function(){$(window).bind("scroll resize",function(){var o=$(this),t=o.scrollTop();180>t&&$("#top-bar").stop().animate({top:"-65px"}),t>180&&$("#top-bar").stop().animate({top:"0px"})}).scroll()})});
 
 //返回頂端
 loadjs(['script/lib/jquery.ui.totop.min.js', 'https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js'], function() {
@@ -75,9 +20,17 @@ loadjs('script/lib/wow.min.js', function() {
 });
 
 //行動版選單
-loadjs("script/lib/overlay.modernizr.custom.js");
-loadjs("script/lib/overlay-classie.js");
-loadjs("script/lib/overlay-set.js");
+loadjs(['https://cdn.jsdelivr.net/npm/mmenu-js@8.1.1/dist/mmenu.min.js', 'https://cdn.jsdelivr.net/npm/mmenu-js@8.1.1/dist/mmenu.min.css'], function() {
+    new Mmenu( document.querySelector( '#mobile-nav' ) );
+
+    document.addEventListener( 'click', ( evnt ) => {
+        let anchor = evnt.target.closest( 'a[href^="#/"]' );
+        if ( anchor ) {
+            alert('Thank you for clicking, but that\'s a demo link.');
+            evnt.preventDefault();                   
+        }
+    });
+});
 
 // 另開視窗
 function externalLinks() { 

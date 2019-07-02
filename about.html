@@ -44,7 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
     
-    <div id="top-bar">
+    <!--<div id="top-bar">
         <div id="menu">
             <h3><a href="index.html">愛普整合行銷</a></h3>
             <ul>
@@ -55,7 +55,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="https://www.facebook.com/iprc.tw/" rel="external" title="[另開視窗]愛普粉絲專頁"><i class="fab fa-facebook"></i></a></li>
             </ul>
         </div>
-    </div>
+    </div>-->
     
     <div id="wrap">
         <header>
@@ -65,10 +65,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="contact.html"><i class="far fa-envelope"></i></a>
                 <nav id="main-nav">
                     <ul><!--在該單元時，li的class請幫我加上nowin-->
-                        <li><a class="hvr-underline" href="index.html" title="首頁">首頁</a></li>
-                        <li><a class="hvr-underline nowin" href="about.html" title="關於愛普">關於愛普</a></li>
-                        <li><a class="hvr-underline" href="projects-list.html" title="作品集">作品集</a></li>
-                        <li><a class="hvr-underline" href="contact.html" title="一起合作吧">一起合作吧</a></li>
+                        <li><a href="index.html" title="首頁">首頁</a></li>
+                        <li><a class="nowin" href="about.html" title="關於愛普">關於愛普</a></li>
+                        <li><a href="projects-list.html" title="作品集">作品集</a>
+                            <ul>
+                                <li><a href="projects-D.html">· Design</a></li>
+                                <li><a href="projects-P.html">· Printing &amp; Production</a></li>
+                                <li><a href="projects-A.html">· Academic symposium Corporate conference</a></li>
+                                <li><a href="projects-E.html">· Event &amp; Exhibition</a></li>
+                                <li><a href="projects-T.html">· Team building</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" title="一起合作吧">一起合作吧</a></li>
                         <li><a href="https://www.facebook.com/iprc.tw/" rel="external" title="[另開視窗]愛普粉絲專頁"><i class="fab fa-facebook"></i></a></li>
                     </ul>
                 </nav>
@@ -185,24 +193,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div><!--//end #wrap-->
 
     <!--mobile menu-->
-    <div class="overlay overlay-scale">
-        <button type="button" class="overlay-close"><i class="fas fa-times-square"></i></button>
-        <nav>
-            <div class="ilogo"></div>
-            <ul>
-                <li><a class="hvr-overlay" href="index.html">▪ 首頁</a></li>
-                <li><a class="hvr-overlay" href="about.html">▪ 關於愛普</a></li>
-                <li><a class="hvr-overlay" href="projects-list.html">▪ 作品集</a></li>
-                <li><a class="hvr-overlay" href="contact.html">▪ 一起合作吧</a></li>
-                <li><a class="hvr-overlay" href="https://www.facebook.com/pg/iprc.tw" rel="external">▪ 愛普.好友好時光</a></li>
-            </ul>
-        </nav>
-    </div>    
+    <nav id="mobile-nav">
+        <ul>
+            <li><a href="index.html" title="首頁">首頁</a></li>
+            <li><a href="about.html" title="關於愛普">關於愛普</a></li>
+            <li><a href="projects-list.html" title="作品集">作品集</a>
+                <ul>
+                    <li><a href="projects-D.html">Design</a></li>
+                    <li><a href="projects-P.html">Printing &amp; Production</a></li>
+                    <li><a href="projects-A.html">Academic symposium Corporate conference</a></li>
+                    <li><a href="projects-E.html">Event &amp; Exhibition</a></li>
+                    <li><a href="projects-T.html">Team building</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" title="一起合作吧">一起合作吧</a></li>
+        </ul>
+    </nav>   
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
 <script>jQuery(document).ready(function(){jQuery("#loading").fadeOut(0)});</script>
 <script src="https://cdn.jsdelivr.net/npm/loadjs@3.6.1/dist/loadjs.umd.min.js"></script>
 <script src="script/pages.js"></script>
-<script src="https://instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
 </body>
 </html>

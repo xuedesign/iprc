@@ -250,6 +250,7 @@ header{
     line-height: 2.25rem;
     text-align: left;
     color: #77BD1F;
+    text-shadow: 0 1px 0 #383838
     /*border-bottom: 1px dashed #fff*/}
 #main-nav li:hover li .linesmall,
 #main-nav li.iehover li .linesmall{
@@ -274,6 +275,17 @@ header{
     /*background: rgb(24,145,197)*/}
 
 /*行動版選單*/
+.mm-navbar {
+        --mm-color-background: #609b16;
+        --mm-color-text-dimmed: #fff;
+        --mm-color-button: #fff;
+        font-size: 18px}
+.mm-panel {
+        --mm-color-background: #ededed;
+        --mm-color-text: #333333;
+        --mm-color-button: #609b16}
+.mm-listitem > a,
+.mm-listitem > span { font-size: 18px}
 
 /*
 =====================================

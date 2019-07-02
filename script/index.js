@@ -8,7 +8,7 @@ loadjs('https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js', function() {
 });
 
 //頂端浮動選單
-$(function(){$(window).load(function(){$(window).bind("scroll resize",function(){var o=$(this),t=o.scrollTop();180>t&&$("#top-bar").stop().animate({top:"-65px"}),t>180&&$("#top-bar").stop().animate({top:"0px"})}).scroll()})});
+//$(function(){$(window).load(function(){$(window).bind("scroll resize",function(){var o=$(this),t=o.scrollTop();180>t&&$("#top-bar").stop().animate({top:"-65px"}),t>180&&$("#top-bar").stop().animate({top:"0px"})}).scroll()})});
 
 //wow載入動畫
 loadjs('script/lib/wow.min.js', function() {
@@ -23,9 +23,17 @@ loadjs(['script/lib/jquery.ui.totop.min.js', 'https://cdn.jsdelivr.net/npm/jquer
 });
 
 //行動版選單
-loadjs("script/lib/overlay.modernizr.custom.js");
-loadjs("script/lib/overlay-classie.js");
-loadjs("script/lib/overlay-set.js");
+loadjs(['https://cdn.jsdelivr.net/npm/mmenu-js@8.1.1/dist/mmenu.min.js', 'https://cdn.jsdelivr.net/npm/mmenu-js@8.1.1/dist/mmenu.min.css'], function() {
+    new Mmenu( document.querySelector( '#mobile-nav' ) );
+
+    document.addEventListener( 'click', ( evnt ) => {
+        let anchor = evnt.target.closest( 'a[href^="#/"]' );
+        if ( anchor ) {
+            alert('Thank you for clicking, but that\'s a demo link.');
+            evnt.preventDefault();                   
+        }
+    });
+});
 
 // 另開視窗
 function externalLinks() { 

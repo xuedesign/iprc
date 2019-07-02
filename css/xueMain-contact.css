@@ -129,7 +129,7 @@ footer,
 #box_contact{
     display: block;
     width: 1280px;
-    padding-top: 100px;
+    padding-top: 130px;
     margin: 0 auto 100px auto}
 #company-contact{
     display: block;
@@ -159,8 +159,14 @@ footer,
     float: right;
     width: 40%;
     text-align: right}
+#main-nav ul{
+    display: block;
+    position: absolute;
+    top:25px;
+    right:15%}
 #main-nav li{
     display: inline;
+    position:relative;
     font-size: 1.6rem;
     line-height: 2.3rem;
     letter-spacing: .3rem;
@@ -209,7 +215,66 @@ footer,
     color: #77BD1F;
     border-bottom: 3px solid #77BD1F}
 
+#main-nav li ul{ display: none}
+#main-nav li:hover ul{display: block}
+#main-nav li li{
+    display: block;
+    width: 100px;
+    height: 30px}
+#main-nav li:hover li a,
+#main-nav li.iehover li a{
+    display: block;
+    float: none;
+    position: absolute;
+    top: 10px;
+    right: -300px;
+    z-index: 1000;
+    list-style: circle;
+    width: 350px/*210px*/;
+    height: 30px;
+    padding-left: 10px;
+	/*background: rgba(106,203,243,.9);*/
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    line-height: 2.25rem;
+    text-align: left;
+    color: #77BD1F;
+    text-shadow: 0 1px 0 #383838
+    /*border-bottom: 1px dashed #fff*/}
+#main-nav li:hover li .linesmall,
+#main-nav li.iehover li .linesmall{
+    padding-top: 8px;
+    line-height: 3rem}
+#main-nav li:hover li a:hover,
+#main-nav li:hover li:hover a,
+#main-nav li.iehover li a:hover,
+#main-nav li.iehover li.iehover a {
+    font-weight: bold;
+    color: #fff;
+	/*background: rgb(24,145,197)*/}
+#main-nav li li.subtitle a,
+#main-nav li li.subtitle a:hover{
+    display: block;
+    width: 210px;
+	float: none;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    /*background: rgb(24,145,197)*/}
+
 /*行動版選單*/
+.mm-navbar {
+        --mm-color-background: #609b16;
+        --mm-color-text-dimmed: #fff;
+        --mm-color-button: #fff;
+        font-size: 18px}
+.mm-panel {
+        --mm-color-background: #ededed;
+        --mm-color-text: #333333;
+        --mm-color-button: #609b16}
+.mm-listitem > a,
+.mm-listitem > span { font-size: 18px}
 
 /*
 =====================================
