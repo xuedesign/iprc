@@ -169,8 +169,9 @@ header{ background: #77bc1f}
 #main-nav ul{
     display: block;
     position: absolute;
-    top:25px;
+    top:50px;
     right:15%}
+#main-nav ul ul{ top: 30px}
 #main-nav li{
     display: inline;
     position:relative;
@@ -240,7 +241,7 @@ header{ background: #77bc1f}
     width: 350px/*210px*/;
     height: 30px;
     padding-left: 10px;
-	/*background: rgba(106,203,243,.9);*/
+	background: rgba(220, 247, 213, 0.9);
     font-size: 1.5rem;
     letter-spacing: 0;
     line-height: 2.25rem;

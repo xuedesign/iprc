@@ -25,14 +25,16 @@ loadjs(['script/lib/jquery.ui.totop.min.js', 'https://cdn.jsdelivr.net/npm/jquer
 //行動版選單
 loadjs(['https://cdn.jsdelivr.net/npm/mmenu-js@8.1.1/dist/mmenu.min.js', 'https://cdn.jsdelivr.net/npm/mmenu-js@8.1.1/dist/mmenu.min.css'], function() {
     new Mmenu( document.querySelector( '#mobile-nav' ) );
-
-    document.addEventListener( 'click', ( evnt ) => {
-        let anchor = evnt.target.closest( 'a[href^="#/"]' );
-        if ( anchor ) {
-            alert('Thank you for clicking, but that\'s a demo link.');
-            evnt.preventDefault();                   
+        
+    document.addEventListener(
+        "DOMContentLoaded", () => {
+        new Mmenu( "#mobile-nav", {
+           "extensions": [
+              "pagedim-black"
+           ]
+        });
         }
-    });
+    );
 });
 
 // 另開視窗

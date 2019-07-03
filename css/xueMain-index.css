@@ -244,7 +244,7 @@ header{
     width: 350px/*210px*/;
     height: 30px;
     padding-left: 10px;
-	/*background: rgba(106,203,243,.9);*/
+	background: rgba(52, 52, 52, 0.9);
     font-size: 1.5rem;
     letter-spacing: 0;
     line-height: 2.25rem;
@@ -417,15 +417,17 @@ h1 a{
     width: 300px;
     margin: 0 1%;
     vertical-align: top}
-#container_service h3{
+#container_service h3,
+#container_work h3{
     display: table-cell;
     width: 300px;
-    height: 60px;
     font-size: 1.6rem;
     line-height: 2rem;
     text-align: center;
     vertical-align: middle;
     margin: 0 auto}
+#container_service h3{ height: 60px}
+#container_work h3{ height: 70px}
 .service_info,
 .service_info p{
     width: 300px;
@@ -556,20 +558,20 @@ h1 a{
 /*專案展示*/
 #container_work{
     display: block;
-    width: 90%;
+    width: 83%;
     margin: 0 auto}
 #container_work ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex: 5;
+    display: block;
     text-align: center}
 #container_work li{
+    display: inline-block;
+    width: 19%}
+#container_work li li{
     display: block;
     position: relative;
     width: 300px;
     height: 180px;
-    margin: 1.2%}
+    margin: 5px}
 #container_work img{
     display: block;
     width: 100%;
@@ -606,7 +608,7 @@ h1 a{
     right: 5%;
     bottom: 40%;
     margin: 0}
-#container_work .work-title h3,
+#container_work .work-title h4,
 #container_work .work-title p{
     font-size: 1.6rem;
     line-height: 2rem;
@@ -621,6 +623,7 @@ h1 a{
     display: inline-block;
     margin: 0;
     padding: 0}
+
 /*聯絡方式*/
 #tocontact a{
     display: block;
