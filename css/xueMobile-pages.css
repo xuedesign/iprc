@@ -220,13 +220,18 @@ h1 a{
     
 #container{ padding-top: 110px}
 #team_main .team-word{ margin: 0 30px}
-#box_strength h4{ padding: 50px 20px 0}
+#box_strength h4{ 
+    font-size: 1.6rem;
+    padding: 50px 20px 0}
 
 .grid-item{ height: 670px; margin: 10px 15px}
 .grid-item img{ margin: 0 auto}
 .btn_previous,
 .btn_next{ display: none}
 #bar_PageNumber span{ padding: 0 15px}
+#box_belief,
+#box_strategy,
+#box_strength{ padding: 25px 0}    
     
 }
 
