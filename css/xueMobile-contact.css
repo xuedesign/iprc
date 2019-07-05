@@ -31,6 +31,11 @@
 *
 **/
 
+
+@media (max-width:1500px) {
+    #main-nav ul{ right:10%}  
+}
+
 /*
 =====================================
 平板裝置(寬>長)  for-tablet-landscape-up
@@ -49,6 +54,8 @@ footer,
 
 #menu{ width: 90%}
 #main-nav{ width: 50%}
+#main-nav li:hover li a,
+#main-nav li.iehover li a{ right: -250px}    
 #contact-us{ width: 90%}
     
 #company-contact,
@@ -95,6 +102,11 @@ footer,
 #main-nav li{
     letter-spacing: .2rem;
     margin: 0 8px}
+#main-nav li:hover li a,    
+#main-nav li.iehover li a{ 
+    top: 15px;
+    right: -180px;
+    line-height: 2.5rem}      
 #contact-us h2 a{
     width: 180px;
     height: 119px;

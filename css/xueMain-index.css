@@ -297,6 +297,7 @@ header{
   display:none;
   text-decoration:none;
   position:fixed;
+  z-index: 999;     
   bottom:10px;
   right:10px;
   overflow:hidden;

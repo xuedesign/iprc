@@ -51,21 +51,27 @@
 .info-04,
 .info-05{ background-position: top center}
 #container_team h2{
+    width: 39%;
     background-size: 400px 174px;
     background-position: 0 200px}
-#container_work li,
+#team_info{ width: 60%}
+    
+#container_work{ width: 95%}    
+#container_work li li,
 #container_work .work-title{
-    width: 225px;
-    height: 135px}
-#container_work li{ margin: 1%}
+    width: 250px;
+    height: 150px}
+#container_work li{ margin: 0}
 #container_work .work-title>span{
     top: 30%;
     bottom: 20%}
+    
 #container_customer{
     width: 100%}
 #container_customer img{
     width: 33%;
     height: auto}
+    
 }
 
 @media (max-width:1400px) {
@@ -87,13 +93,13 @@
 #our_customer li:nth-child(8){ 
     background-size: 60px 60px;
     background-position: top center}
-#container_work li,
+#container_work li li,
 #container_work .work-title{
-    width: 215px;
-    height: 129px}
-#container_work li{ margin: 1%}
+    width: 240px;
+    height: 144px}
+#container_work li li{ margin: 5px}
 #container_work .work-title>span{
-    top: 20%;
+    top: 30%;
     bottom: 20%}
 #container_customer{
     width: 100%}
@@ -131,6 +137,8 @@ footer,
 #main-nav{ width: 60%}
 #main-nav ul{ right:5%}       
 #contact-us{ width: 90%}
+#main-nav li:hover li a,
+#main-nav li.iehover li a{ right: -250px}
 
 #container_service ul{ width: 95%}
 #container_service li{ margin: 0 .5%}
@@ -147,15 +155,16 @@ footer,
 #container_team h2,
 #team_info{ float: none; width: 100%}
 #container_team h2{
-    height: 200px;
+    height: 150px;
+    background-size: 300px 131px;
     background-position: 50% 0;
     margin: 0 auto 30px auto}
 
-#container_work ul{ flex: 3}
-#container_work li,
+#container_work{ width: 98%}       
+#container_work li li,
 #container_work .work-title{
-    width: 285px;
-    height: 171px}
+    width: 185px;
+    height: 111px}
 #container_work .work-title>span{
     top: 30%;
     bottom: 30%}
@@ -182,20 +191,25 @@ footer,
 .service_info p{ 
     padding: 0 0 10px 10px}
     
-#container_work ul{ flex: 2}
-#container_work li{
-    margin: 1%;
-    width: 48%}
-#container_work img{
+#container_work li{ 
+    width: 45%;
+    margin-bottom: 20px}    
+#container_work li li{
+    margin: 5px;
+    width: 100%}
+/*#container_work img{
     display: block;
     width: 328px;
-    height: 197px}
+    height: 197px}*/
 #container_work .work-title{ width: 100%}
-#container_work li,
+#container_work li li,
 #container_work .work-title{ height: 100%}
 #container_work .work-title>span{
     top: 35%;
     bottom: 35%}
+#container_customer img{
+    width: 100%;
+    height: auto}
 }
 
 /*
@@ -204,11 +218,22 @@ footer,
 =====================================
 */
 @media (max-width: 600px) { /*573*/
+#box_service,
+#box_team,
+#box_work,
+#box_customer{
+    padding: 30px 0}
 #menu a{ padding:0 10px}
 #main-nav{ width: 80%}
 #main-nav li{
     letter-spacing: .2rem;
     margin: 0 8px}
+#main-nav li:hover li a,    
+#main-nav li.iehover li a{ 
+    top: 15px;
+    right: -180px;
+    line-height: 2.5rem}  
+    
 #contact-us h2 a{
     width: 180px;
     height: 119px;
@@ -247,11 +272,6 @@ footer,
 =====================================
 */
 @media (max-width: 420px) { /*360*/
-#box_service,
-#box_team,
-#box_work,
-#box_customer{
-    padding: 30px 0}
 #box_work{ padding-bottom: 10px}
 #top-bar{ display: none}
 #header-main{ 
@@ -316,18 +336,22 @@ h1 a{
     margin-bottom: 30px;
     padding-top: 70px}
 
-#container_work ul{ flex: 1}
 #container_work li{ 
-    margin: 1%;
-    width: 100%}    
+    width: 95%;
+    margin: 0 auto 20px auto}
+#container_work h3{
+    display: block;
+    width: 100%;
+    height: 40px}
+#container_work li:nth-child(3)>h3{
+    height: 60px}
+#container_work li li img{ 
+    width: 100%;
+    height: auto}   
+
 #container_customer img{
     width: 100%;
-    height: auto}
-
-#container_work img{
-    display: block;
-    width: 358px;
-    height: 215px}
+    height: auto}    
 
 #tocontact a{
     width: 90%;
