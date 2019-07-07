@@ -564,7 +564,7 @@ h1 a{
     display: inline-block;
     vertical-align: top;
     width: 300px;
-    height: 680px;
+    height: 600px;
     margin: 15px 10px;
     background: #fff;
     padding: 10px}
@@ -593,23 +593,26 @@ h1 a{
 #project-main h3,
 #project-main h4{
     display: block;
-    /*height: 85px;*/
+    height: 2.5rem;
     overflow: hidden;
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.3rem;
     color: #333;
-    text-decoration: none}
+    text-decoration: none;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap}
 .grid-item a:hover>h3,
 .grid-item a:hover>h4{
     color: #77bd1f;
     text-decoration: none}
-.grid-item h4{
+/*.grid-item h4{
     overflow:hidden;
     text-overflow:ellipsis;
     display:-webkit-box;
     -webkit-line-clamp:2;
-    -webkit-box-orient:vertical}
+    -webkit-box-orient:vertical}*/
 .grid-item hr,
 #project-main hr{
     margin-bottom: 10px;
@@ -617,8 +620,8 @@ h1 a{
 .p-info,
 a:hover>.p-info{
     display: block;
-    height: 6rem;
-    margin-bottom: 30px;
+    height: 2rem;
+    margin-bottom: 10px;
     overflow: hidden;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -626,7 +629,7 @@ a:hover>.p-info{
     overflow:hidden;
     text-overflow:ellipsis;
     display:-webkit-box;
-    -webkit-line-clamp:3;
+    -webkit-line-clamp:1;
     -webkit-box-orient:vertical}
 
 #box_project-foot{ padding: 30px 0}
