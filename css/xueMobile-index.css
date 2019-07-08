@@ -42,7 +42,7 @@
 #container_service li,
 #container_service h3,
 .service_info,
-.service_info p{ width: 225px}
+.service_info p{ width: 250px}
 .service_info,
 .service_info p{ height: 450px}
 .info-01,
@@ -79,7 +79,7 @@
 #container_service li,
 #container_service h3,
 .service_info,
-.service_info p{ width: 200px}
+.service_info p{ width: 235px}
 .service_info,
 .service_info p{ height: 400px}
 #our_customer li{ font-size: 1.35rem}
@@ -146,7 +146,7 @@ footer,
 #container_service li,
 #container_service h3,
 .service_info,
-.service_info p{ width: 165px}
+.service_info p{ width: 180px}
 .service_info,
 .service_info p{ height: 400px}
 .service_info p{ 
@@ -179,7 +179,7 @@ footer,
 #main-nav{ width: 70%}
 
 #container_service ul{ justify-content:center}
-#container_service li{ margin: 0 .5% 30px}
+#container_service li{ margin: 0 5px 30px 5px}
 #container_service li:nth-child(4){ 
     margin: 0 .5% 30px 100px}
 #container_service li,
@@ -386,7 +386,17 @@ h1 a{
 =====================================
 */
 @media (max-width: 321px) { /*300*/
-
+#container_service li,
+#container_service li:nth-child(4){
+    display: block;
+    width: 280px;
+    margin: 0 auto 30px auto}
+#container_service h3,
+.service_info,
+.service_info p{
+    width: 280px;
+    margin: 0 auto}
+    
 #tocontact a{
     width: 90%;
     font-size: 1.5rem}

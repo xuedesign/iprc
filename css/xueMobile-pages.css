@@ -166,8 +166,8 @@ footer,
     width: 65%;
     padding: 0 0 0 20px}
     
-#box_imagewall,
-#box_establish{ display: none}
+/*#box_imagewall,
+#box_establish{ display: none}*/
 #box_belief img{
     width: 120%;
     height: auto;
@@ -251,7 +251,9 @@ h1 a{
 #box_strength h4{ 
     font-size: 1.6rem;
     padding: 50px 20px 0}
-#box_belief img{
+#box_belief img,
+#box_imagewall img,
+#box_establish img{
     width: 100%;
     height: auto;
     margin-left: 0} 
