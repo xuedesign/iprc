@@ -161,13 +161,29 @@ footer,
     margin: 0 auto 30px auto}
 
 #container_work{ width: 98%}       
-#container_work li li,
+/*#container_work li li,
 #container_work .work-title{
     width: 185px;
     height: 111px}
 #container_work .work-title>span{
     top: 30%;
-    bottom: 30%}
+    bottom: 30%}*/
+#container_work h3{ width: 420px}
+#container_work li{ 
+    width: 45%;
+    margin-bottom: 20px}    
+#container_work li li{
+    margin: 5px;
+    width: 100%}
+#container_work .work-title{ width: 100%}
+#container_work li li,
+#container_work .work-title{ height: 100%}
+#container_work .work-title>span{
+    top: 35%;
+    bottom: 35%}
+#company-address span{
+    display: block;
+    width: 100%}
 }
 
 /*
@@ -190,26 +206,9 @@ footer,
 .service_info p{ height: 400px}
 .service_info p{ 
     padding: 0 0 10px 10px}
-    
-#container_work li{ 
-    width: 45%;
-    margin-bottom: 20px}    
-#container_work li li{
-    margin: 5px;
-    width: 100%}
-/*#container_work img{
-    display: block;
-    width: 328px;
-    height: 197px}*/
-#container_work .work-title{ width: 100%}
-#container_work li li,
-#container_work .work-title{ height: 100%}
-#container_work .work-title>span{
-    top: 35%;
-    bottom: 35%}
 #container_customer img{
     width: 100%;
-    height: auto}
+    height: auto}    
 }
 
 /*

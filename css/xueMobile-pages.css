@@ -102,7 +102,10 @@ footer,
 #filters{ width: 90%; margin: 0 auto}
 #filters a{margin-bottom: 20px}
 .grid-item{ margin: 15px 9px}
-   
+    
+#company-address span{
+    display: block;
+    width: 100%} 
 }
 
 /*
