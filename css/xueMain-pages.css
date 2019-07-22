@@ -43,6 +43,7 @@
 *   5-2.專案列表
 *   5-3.專案介紹
 *   5-4.聯絡方式+版權列
+*   5-5.錯誤頁面
 * 6.等待載入動畫
 * 7.Animate
 * 8.自訂scrollbar
@@ -710,6 +711,33 @@ a:hover>.p-info{
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s}
+
+/*錯誤頁面*/
+#box_error{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: justify}
+#box_error h5{
+    display: block;
+    padding: 100px 0 30px;
+    font-size: 38rem;
+    line-height: 8rem;
+    color: #77bd1f;
+    text-align: center}
+#box_error h5 span{
+    font-size: 8rem}
+#box_error h6{
+    display: block;
+    padding: 20px 0;
+    font-size: 1.8rem;
+    text-align: center}
+#box_error p{
+    display: block;
+    padding: 0 0 20px;
+    font-size: 1.6rem;
+    line-height: 2.2rem}
+
 
 
 /*
