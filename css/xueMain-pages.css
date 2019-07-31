@@ -650,6 +650,7 @@ a:hover>.p-info{
 
 #project-main img{
     display: block;
+    max-width: 99%;
     margin: 8px 0 15px 0}
 #project-main p{
     font-size: 1.5rem;
