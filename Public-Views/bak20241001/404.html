@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <?=$Ed->WebSetDB['headInfo']?>
+        <link rel="apple-touch-icon" href="images/favicon@2x.png">
+        <link rel="stylesheet" href="css/xueMain-pages.css"/>
+        <link rel="stylesheet" href="css/xueExpansion.css">
+        <link rel="stylesheet" href="css/xueMobile-pages.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+        <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="loading">
+            <div class="spinner">
+                <img src="images/loading.png" class="ld ld-bounce"/>
+                <p>正在載入...</p>
+            </div>
+        </div>
+
+        <div id="wrap">
+            <header>
+                <?php include $Ed->tplPath . '_header.html';?> 
+            </header>
+
+            <div id="container">
+                <div id="project-main">
+                    <h3>錯誤提醒</h3>
+                    <hr>
+                    <div id="box_error">
+                        <h6>我們找不到你要的頁面，有可能不存在或已刪除</h6>
+                        <h5>404<br><span>Page Not Found</span></h5>
+                        <p>伺服器無法找到您要求的位址，有可能是您輸入的位址錯誤，或是該網頁已不存在。你可以嘗試重新輸入位置或利用上方選單進行瀏覽。如有其他問題，請聯絡網站管理員，謝謝。</p>
+                        <p>We are sorry but the page you are looking for cannot be found.Please select from one of the links above to find your way again!</p>
+                        <a class="mybtn-m btn_backto" href="../Index">返回首頁</a>
+                    </div>        
+                </div>
+
+                <h2 id="maybelike">你可能也有興趣看：</h2>
+
+                <!--下列隨機呈現5組不分類別的案例-->
+                <div class="grid">
+                    <? foreach($Ed->ProRelated as $idx => $val) { ?>
+                    <div class="grid-item">
+                        <a href="../Projects/Detail/<?=$val['ID']?>/<?=$val['Name']?>">
+                            <h3><?=$val['Company']?></h3>
+                            <h4><?=$val['Name']?></h4>
+                            <hr><img src="<?=URL_ROOT_PATH.$val['SImg']?>" alt="<?=$val['Name']?>">
+                            <p class="p-info"><?=$val['Finished']?></p>
+                            <p class="p-tag"><a href="../Projects/Plist/<?=$val['CateID']?>"><?=$val['CateName']?></a></p>
+                        </a>
+                    </div>
+                    <? } ?>                
+
+                </div>
+            </div>
+
+            <footer>
+                <div id="tocontact">
+                    <a href="../Contact">開始客製化你的需求，一起合作吧 &gt;</a>
+                </div>
+                <?php include $Ed->tplPath . '_footer.html';?>
+            </footer>
+        </div><!--//end #wrap-->
+
+        <!--mobile menu-->
+        <nav id="mobile-nav">
+            <?php include $Ed->tplPath . '_nav.html';?> 
+        </nav>   
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+        <script>
+            jQuery(document).ready(function () {
+                jQuery("#loading").fadeOut(0)
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/loadjs@3.6.1/dist/loadjs.umd.min.js"></script>
+        <script src="../js/pages.js"></script>
+        <?=$Ed->WebSetDB['footerJs']?> 
+    </body>
+</html>

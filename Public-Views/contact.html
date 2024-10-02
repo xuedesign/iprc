@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <?=$Ed->WebSetDB['headInfo']?>    
+        <link rel="apple-touch-icon" href="images/favicon@2x.png"/>
+        <link rel="stylesheet" href="css/xueMain-contact.css"/>
+        <link rel="stylesheet" href="css/xueExpansion.css"/>
+        <link rel="stylesheet" href="css/xueMobile-contact.css"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous"/>
+        <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="loading">
+            <div class="spinner">
+                <img src="images/loading.png" class="ld ld-bounce"/>
+                <p>正在載入...</p>
+            </div>
+        </div>
+
+        <div id="wrap">
+            <header>
+                <?php include $Ed->tplPath . '_header.html';?> 
+            </header>
+
+            <div id="container">
+                <div id="box_contact">
+                    <div id="company-contact" class="wow slideInLeft">
+                        <div id="contact_left">
+                            <h3>CONTACT US</h3>
+                            <p class="myemail"><a href="mailto:iprc@iprc.com.tw">iprc@iprc.com.tw</a></p>
+                        </div>
+                        <div id="contact_right">
+                            <h3>OFFICE</h3>
+                            <p>10077台北市中正區和平西路一段122號4樓</p>
+                            <p>T : +886 2 2363 7171</p>  
+                            <p>F : +886 2 2363 9191</p>
+                        </div> 
+                    </div>
+
+                    <div id="company-form" class="wow slideInRight"><!--直接寄到iprc@iprc.com.tw，不用後台管理-->
+                        <form id="my_form" onsubmit="return false">
+                            <div class="form-item">
+                                <label for="Company">公司/品牌名稱</label>
+                                <input id="Company" type="text" name="Company" placeholder="Enter your company here" rel="*" title="公司/品牌名稱">
+                            </div>
+
+                            <div class="form-item">
+                                <label for="Name">姓名</label>
+                                <input id="Name" type="text" name="Name" placeholder="Enter your name here" rel="*" title="姓名">
+                            </div>    
+
+                            <div class="form-item">    
+                                <label for="Phone">電話</label>
+                                <input id="Phone" type="tel" name="Phone" placeholder="Enter your phone here" rel="*" title="電話">
+                            </div>    
+
+                            <div class="form-item">    
+                                <label for="EMail">E-mail</label>
+                                <input id="EMail" type="email" name="EMail" placeholder="Enter your E-mail here" rel="*" title="E-mail">
+                            </div>   
+
+                            <div class="form-item">        
+                                <label for="Contents">欲洽談之業務</label>
+                                <input id="Contents" type="text" name="Contents" placeholder="請輸入：如 平面設計、視覺設計、包裝設計、網頁設計、展場規劃、會議議場..." rel="*" title="欲洽談之業務">
+                            </div>    
+
+                            <!--<img src="images/pic_captcha.png" alt="*">-->
+                            <img src="../Verification/captcha/" alt="*" width="160" height="60" class="captchaBox" onclick='formCon.resetCaptcha();'/>
+
+                            <div class="form-item">
+                                <label for="Captcha">驗證碼</label>
+                                <input id="Captcha" type="text" name="Captcha" placeholder="請輸入驗證碼" rel="*" title="驗證碼"/>
+                            </div>
+
+                            <button class="mybtn-m" type="button" onclick="formCon.sendContact('my_form');">提交</button>
+                        </form>    
+                    </div>
+                </div>    
+            </div>
+
+            <footer>
+                <?php include $Ed->tplPath . '_footer.html';?> 
+            </footer>
+        </div><!--//end #wrap-->
+
+        <!--mobile menu-->
+        <nav id="mobile-nav">
+            <?php include $Ed->tplPath . '_nav.html';?> 
+        </nav>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/loadjs@3.6.1/dist/loadjs.umd.min.js"></script>
+        <script src="../js/_js.js"></script>
+        <script src="../js/jquery.blockUI.js"></script>
+        <script src="../js/jquery.timers.js"></script>     
+        <script src="../js/_formRequest.js"></script>
+        <script src="../js/pages.js"></script>
+        <script>
+            jQuery(document).ready(function () {
+            jQuery("#loading").fadeOut(0)
+            $('#header-main nav> ul > li').eq(3).find('a').addClass('nowin');  
+        });
+        </script>
+        <?=$Ed->WebSetDB['footerJs']?> 
+    </body>
+</html>

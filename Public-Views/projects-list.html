@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <?=$Ed->WebSetDB['headInfo']?>
+        <link rel="apple-touch-icon" href="images/favicon@2x.png">
+        <link rel="stylesheet" href="css/xueMain-pages.css"/>
+        <link rel="stylesheet" href="css/xueExpansion.css">
+        <link rel="stylesheet" href="css/xueMobile-pages.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+        <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="loading">
+            <div class="spinner">
+                <img src="images/loading.png" class="ld ld-bounce"/>
+                <p>正在載入...</p>
+            </div>
+        </div>
+
+        <div id="wrap">
+            <header>
+                <?php include $Ed->tplPath . '_header.html';?> 
+            </header>
+
+            <div id="container">
+
+                <!-- 1頁15則文章，最新的在前面-->
+                <div class="grid">
+                    <? foreach($Ed->ProInfo['json'] as $idx => $val) {?>
+                    <div class="grid-item">
+                        <a href="../Projects/Detail/<?=$val->ID?>/<?=$val->Name?>">
+                            <h3><?=$val->Company?></h3><!--公司名稱-->
+                            <h4><?=$val->Name?></h4><!--製作主題-->
+                            <hr><img src="<?=URL_ROOT_PATH.$val->SImg?>" alt="<?=$val->Name?>"><!--列表縮圖-->
+                            <p class="p-info"><?=$val->Finished?></p><!--製作成品-->
+                            <p class="p-tag"><a href="../Projects/Plist/<?=$val->CateID?>"><?=$val->CateName?></a></p><!--作品類別，點選後列表只秀出該類別作品-->
+                        </a>
+                    </div>
+                    <?}?>
+
+                </div>
+
+                <? if($Ed->ProInfo['pageInfo']['Pages'] != 1){ ?>
+                <div id="bar_PageNumber">
+                    <?if($Ed->ProInfo['pageInfo']['p'] > 1){?>
+                    <a class="btn_previous" href="<?=$_SERVER['SCRIPT_URI'].'?p=' . ($Ed->ProInfo['pageInfo']['p'] - 1)?>" title="上一頁">上一頁</a>
+                    <? } ?>
+                    
+                    <? for($i=1;$i<=$Ed->ProInfo['pageInfo']['Pages'];$i++) { ?>
+                        <? 
+                        if($i > ($Ed->ProInfo['pageInfo']['p'] + 5) || $i < ($Ed->ProInfo['pageInfo']['p'] - 5)) {
+                            continue;
+                        }
+                        ?>
+                        <? if($i == $Ed->ProInfo['pageInfo']['p']){ ?>
+                           <span><?=$i?></span>
+                        <? } else { ?>
+                        <a href="<?=$_SERVER['SCRIPT_URI'].'?p=' . $i?>" title="第<?=$i?>頁"><?=$i?></a>
+                        <? } ?>
+                    <? } ?>
+                    
+                    <?if($Ed->ProInfo['pageInfo']['p'] < $Ed->ProInfo['pageInfo']['Pages']){?>
+                    <a class="btn_next" href="<?=$_SERVER['SCRIPT_URI'].'?p=' . ($Ed->ProInfo['pageInfo']['p'] + 1)?>" title="下一頁">下一頁</a>
+                    <?}?>
+                </div>
+                <? } ?>
+            </div>
+
+            <footer>
+                <div id="tocontact">
+                    <a href="../Contact">開始客製化你的需求，一起合作吧 &gt;</a>
+                </div>
+                <?php include $Ed->tplPath . '_footer.html';?> 
+            </footer>
+        </div><!--//end #wrap-->
+
+        <!--mobile menu-->
+        <nav id="mobile-nav">
+            <?php include $Ed->tplPath . '_nav.html';?> 
+        </nav>    
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+        <script>
+            jQuery(document).ready(function () {
+                jQuery("#loading").fadeOut(0);
+                $('#header-main nav> ul > li').eq(2).find('a').eq(0).addClass('nowin');  
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/loadjs@3.6.1/dist/loadjs.umd.min.js"></script>
+        <script src="../js/pages.js"></script>
+        <?=$Ed->WebSetDB['footerJs']?> 
+    </body>
+</html>
