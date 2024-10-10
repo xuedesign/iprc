@@ -208,7 +208,15 @@ footer,
     padding: 0 0 10px 10px}
 #container_customer img{
     width: 100%;
-    height: auto}    
+    height: auto}
+#contact-us h2 a{
+    width: 180px;
+    height: 119px;
+    background-size: contain;
+    margin-top: 50px;}
+#company-address{
+    width: 65%;
+    padding: 60px 0 0 20px}
 }
 
 /*
@@ -231,17 +239,7 @@ footer,
 #main-nav li.iehover li a{ 
     top: 15px;
     right: -180px;
-    line-height: 2.5rem}  
-    
-#contact-us h2 a{
-    width: 180px;
-    height: 119px;
-    background-size: contain;
-    margin-top: 50px;}
-#company-address{
-    width: 65%;
-    padding: 0 0 0 20px}
-
+    line-height: 2.5rem}
 #container_service li,
 #container_service h3,
 .service_info,

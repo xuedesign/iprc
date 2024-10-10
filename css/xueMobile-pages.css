@@ -52,9 +52,6 @@
 }
 
 @media (max-width:1400px) {
-#box_establish img{
-    width: 95%;
-    height: auto} 
 #filters{ width: 95%}
 .grid-item{ margin: 15px 8px}
 #box_error{ width: 70%}    
@@ -145,7 +142,34 @@ footer,
 .grid-item{ margin: 15px 29px}
 #box_error{ width: 95%} 
 #box_error h5{ font-size: 30rem}
-#box_error h5 span{ font-size: 6rem}    
+#box_error h5 span{ font-size: 6rem}
+#contact-us h2 a{
+    width: 180px;
+    height: 119px;
+    background-size: contain;
+    margin-top: 50px;}
+#company-address{
+    width: 65%;
+    padding: 60px 0 0 20px}
+#box_establish{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+#item_establish{
+    max-width: 100%;
+}
+#item_establish li{
+    display: block;
+    width: 45%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#item_establish img{
+    display: block;
+    width: 120px;
+    height: auto;
+}
 }
 
 /*
@@ -164,14 +188,6 @@ footer,
     top: 15px;
     right: -180px;
     line-height: 2.5rem}      
-#contact-us h2 a{
-    width: 180px;
-    height: 119px;
-    background-size: contain;
-    margin-top: 50px;}
-#company-address{
-    width: 65%;
-    padding: 0 0 0 20px}
     
 /*#box_imagewall,
 #box_establish{ display: none}*/
@@ -209,7 +225,7 @@ a:hover>.p-info{
 手機(5"以上大螢幕) for-phone-only
 =====================================
 */
-@media (max-width: 420px) { /*360*/
+@media (max-width: 480px) { /*360*/
 #top-bar{ display: none}    
 #header-main{ 
     position:fixed;
@@ -256,6 +272,7 @@ h1 a{
     
 #container{ padding-top: 110px}
 #team_main .team-word{ margin: 0 30px}
+#team_main br{ display: none}
 #box_strength h4{ 
     font-size: 1.6rem;
     padding: 50px 20px 0}
@@ -284,7 +301,27 @@ a:hover>.p-info,
     line-height: 5rem;
     padding: 50px 0 30px}
 #box_error h5 span{ font-size: 3rem}  
-#box_error h6{ line-height: 2.5rem}    
+#box_error h6{ line-height: 2.5rem}
+#item_establish{
+    display: block;
+    width: 100%;
+}
+#item_establish li{
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 30px auto;
+}
+#item_establish img{
+    display: block;
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+}
+#item_establish h4{
+    padding: 10px 0;
+    letter-spacing: 1px;
+}
 }
 
 /*

@@ -92,7 +92,15 @@ footer,
 =====================================
 */
 @media (max-width:800px) { /*750*/
-#main-nav{ width: 70%}    
+#main-nav{ width: 70%}
+#contact-us h2 a{
+    width: 180px;
+    height: 119px;
+    background-size: contain;
+    margin-top: 50px;}
+#company-address{
+    width: 65%;
+    padding: 60px 0 0 20px}
 }
 
 /*
@@ -111,14 +119,6 @@ footer,
     top: 15px;
     right: -180px;
     line-height: 2.5rem}      
-#contact-us h2 a{
-    width: 180px;
-    height: 119px;
-    background-size: contain;
-    margin-top: 50px;}
-#company-address{
-    width: 65%;
-    padding: 0 0 0 20px}
 #contact_left{ width: 40%}
 #contact_right{ width: 59%}
 }
