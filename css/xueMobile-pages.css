@@ -77,7 +77,8 @@ footer,
 #box_team,
 #box_belief,
 #box_strategy,
-#box_strength{ min-width: 0}
+#box_strength,
+#box_certification{ min-width: 0}
 #header-main{ width: 95%; min-width: 0}
 
 #menu{ width: 90%}
@@ -169,6 +170,10 @@ footer,
     display: block;
     width: 120px;
     height: auto;
+}
+.info_certification{
+    width: 80%;
+    margin: 0 auto;
 }
 }
 
@@ -321,6 +326,48 @@ a:hover>.p-info,
 #item_establish h4{
     padding: 10px 0;
     letter-spacing: 1px;
+}
+#box_certification h4{
+    width: 86%;
+    margin: 0 auto;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #77bd1f;
+    text-align: center}
+.info_certification{
+    width: 75%;
+    margin: 0 auto;
+}
+#box_certification h5{
+    line-height: 1.6;
+    padding-bottom: 16px;
+}
+#box_certification h5.icon_earth::before,
+#box_certification h5.icon_esg::before{
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    vertical-align: middle;
+    position: absolute;
+    left: -40px;  /* 調整距離 */
+}
+#box_certification ul{
+    padding: 8px 0 0 26px;
+}
+.sub_certification,
+.img_certification{
+    float: none;
+    width: 100%;
+}
+#box_certification h6{
+    line-height: 1.5;
+}
+.img_certification img{
+    width: 76%;
+    height: auto;
+    margin: 20px auto 0 auto;
 }
 }
 

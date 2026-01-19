@@ -106,7 +106,8 @@ footer,
 #box_team,
 #box_belief,
 #box_strategy,
-#box_strength{
+#box_strength,
+#box_certification{
     display: block;
     width: 100%;
     min-width: 1280px}
@@ -137,14 +138,16 @@ header{ background: #77bc1f}
 #box_establish,
 #box_belief,
 #box_strategy,
-#box_strength{ padding: 50px 0}
+#box_strength,
+#box_certification{ padding: 50px 0}
 #box_team{ padding: 50px 0 0}
 
 #box_imagewall,
 #box_team,
 #box_belief,
 #box_strategy,
-#box_strength{ background: #F7F8F8}
+#box_strength,
+#box_certification{ background: #F7F8F8}
 
 #filters{
     display: block;
@@ -430,14 +433,16 @@ h1 a{
 #box_establish img,
 #box_belief img,
 #box_strategy img,
-#box_strength img{
+#box_strength img,
+#box_certification img{
     display: block;
     margin: 0 auto}
 #box_establish h2,
 #box_team h2,
 #box_belief h2,
 #box_strategy h2,
-#box_strength h2{
+#box_strength h2,
+#box_certification h2{
     font-size: 3.8rem;
     font-weight: 100;
     line-height: 4rem;
@@ -447,7 +452,8 @@ h1 a{
 #box_team h3,
 #box_belief h3,
 #box_strategy h3,
-#box_strength h3{
+#box_strength h3,
+#box_certification h3{
     font-size: 2.1rem;
     font-weight: normal;
     color: rgb(62, 57, 53);
@@ -462,7 +468,9 @@ h1 a{
 #box_strategy h3::before,
 #box_strategy h3::after,
 #box_strength h3::before,
-#box_strength h3::after{ 
+#box_strength h3::after,
+#box_certification h3::before,
+#box_certification h3::after{ 
     content:"———";
     padding: 0 5px}
 #box_strength h4{
@@ -475,7 +483,8 @@ h1 a{
     display: block;
     width: 1100px;
     margin: 0 auto}
-#team_main h4{
+#team_main h4,
+#box_certification h4{
     font-size: 2rem;
     line-height: 3rem;
     color: #77bd1f;
@@ -555,6 +564,75 @@ h1 a{
     line-height: 2.2rem;
     color: #fff;
     text-align: justify;
+}
+.info_certification{
+    display: block;
+    width: 660px;
+    margin: 0 auto;
+    padding: 16px 0;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #3d3935;
+    text-align: justify;
+}
+#box_certification h5{
+    font-weight: bold;
+    line-height: 3;
+    text-decoration: underline;
+}
+#box_certification h5.icon_earth::before,
+#box_certification h5.icon_esg::before{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    vertical-align: middle;
+    position: absolute;
+    left: -60px;  /* 調整距離 */
+}
+
+#box_certification h5.icon_earth,
+#box_certification h5.icon_esg{
+    position: relative;
+}
+#box_certification h5.icon_earth::before{
+    background: url(../images/icon_earth.png) no-repeat center center;
+    background-size: contain;}
+#box_certification h5.icon_esg::before{
+    background: url(../images/icon_esg.png) no-repeat center center;
+    background-size: contain;}
+.sub_certification{
+    display: block;
+    float: left;
+    width: 65%;
+    padding-right: 8px;
+}
+.img_certification{
+    display: block;
+    float: right;
+    width: 34%;
+}
+.img_certification img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+#box_certification h6{
+    color: #77bd1f;
+    line-height: 2;
+    padding-top: 8px;
+}
+#box_certification ul{
+    display: block;
+    padding: 8px 0 0 46px;
+}
+#box_certification li{
+    list-style: disc outside;
+}
+.text_green{
+    color: #77bd1f;
 }
 
 /*作品集*/
