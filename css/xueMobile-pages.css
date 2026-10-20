@@ -175,6 +175,14 @@ footer,
     width: 80%;
     margin: 0 auto;
 }
+.report_downloads{
+    flex-direction: column;
+    width: 80%;
+    gap: 12px}
+.btn_report,
+.btn_report:link,
+.btn_report:visited{
+    white-space: normal}
 }
 
 /*
