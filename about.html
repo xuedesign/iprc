@@ -311,5 +311,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>jQuery(document).ready(function(){jQuery("#loading").fadeOut(0)});</script>
 <script src="https://cdn.jsdelivr.net/npm/loadjs@3.6.1/dist/loadjs.umd.min.js"></script>
 <script src="script/pages.js"></script>
+<!-- <script>
+// 強制下載 PDF。只寫 download 時，瀏覽器常會改開內建閱讀器。
+(function () {
+    var reportButtons = document.querySelectorAll('.btn_report');
+
+    reportButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            var fileUrl = button.getAttribute('href');
+            var fileName = button.getAttribute('download') || 'report.pdf';
+
+            // 先停掉「前往這個網址」的預設行為，才不會開出 PDF 閱讀器
+            event.preventDefault();
+
+            fetch(fileUrl)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('file missing');
+                    }
+                    return response.blob();
+                })
+                .then(function (fileBlob) {
+                    var blobUrl = URL.createObjectURL(fileBlob);
+                    var tempLink = document.createElement('a');
+
+                    tempLink.href = blobUrl;
+                    tempLink.download = fileName;
+                    document.body.appendChild(tempLink);
+                    tempLink.click();
+                    tempLink.remove();
+                    URL.revokeObjectURL(blobUrl);
+                })
+                .catch(function () {
+                    // 用檔案總管直接打開網頁時，瀏覽器不允許這樣抓檔，就回到原本的連結
+                    window.location.href = fileUrl;
+                });
+        });
+    });
+})();
+</script> -->
 </body>
 </html>

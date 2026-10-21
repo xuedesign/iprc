@@ -639,26 +639,27 @@ h1 a{
 .report_downloads{
     display: flex;
     justify-content: center;
-    gap: 16px;
-    width: 760px;
-    margin: 24px auto 28px}
+    gap: 12px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 32px auto 24px}
 .btn_report,
 .btn_report:link,
 .btn_report:visited{
-    flex: 1;
+    flex: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px 18px;
+    gap: 6px;
+    padding: 8px 14px;
     border: 2px solid #77bd1f;
     border-radius: 40px;
     background: #77bd1f;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.4;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
@@ -674,8 +675,8 @@ h1 a{
     outline-offset: 3px}
 .btn_report svg{
     flex-shrink: 0;
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
     fill: currentColor}
 
 /*作品集*/
